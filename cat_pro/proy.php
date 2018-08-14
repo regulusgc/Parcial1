@@ -1,4 +1,12 @@
 <?php
+require("../Db.class.php");
+
+$db = new DB();
+
+$depto   =  $db->query("SELECT * FROM db_prueba.tb_cat_departamento ORDER BY ID_DEPARTAMENTO ASC");
+
+$mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
+
 
 ?>
 
@@ -133,31 +141,12 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" required="required" >
-              <option value=" " >Please select your departament XD jaja</option>
-              <option>Jutiapa</option>
-              <option>Guatemala</option>
-              <option >Alta Verapaz</option>
-              <option >Baja Verapaz</option>
-              <option >Chimaltenango</option>
-              <option >Chiquimula</option>
-              <option >El Progreso</option>
-              <option >Escuintla</option>
-              <option >Huehuetenango</option>
-              <option> Izabal</option>
-              <option >Jalapa</option>
-              <option >Peten</option>
-              <option >Quetzaltenango</option>
-              <option >Quiche</option>
-              <option >Retalhuleu</option>
-              <option >Sacatepequez</option>
-              <option> San Marcos</option>
-              <option >Santa Rosa</option>
-              <option >Solola</option>
-              <option>Suchitepequez</option>
-              <option >Totonicapan</option>
-              <option> Zacapa</option>
 
+            <select name="depto" class="form-control selectpicker" required="required" >
+                <option >Please select your Depto </option>
+                <?php foreach ( $depto as $posicion) { ?>
+              <option value="<?php echo $posicion['ID_DEPARTAMENTO']?> " ><?php echo $posicion['DESCRIPCION_DEPARTAMENTO'] ?></option>
+              <?php }?>
             </select>
           </div>
         </div>
@@ -172,22 +161,11 @@
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
             <select name="state" class="form-control selectpicker" >
               <option value=" " >Please select your Municipio XD jaja</option>
-              <option>Agua Blanca</option>
-              <option>Asuncion Mita</option>
-              <option >Atescatempa</option>
-              <option >Comapa</option>
-              <option >Conguaco</option>
-              <option >El adelanto</option>
-              <option >El Progreso</option>
-              <option >Jalpatagua</option>
-              <option >Jutiapa</option>
-              <option> Moyuta</option>
-              <option >Pasaco</option>
-              <option >Quezada</option>
-              <option >San Jose Acatempa</option>
-              <option >Santa Catarina Mita</option>
-              <option >Yupiltepeque</option>
-              <option >Zapotitlan</option>
+                <?php
+
+
+                ?>
+
 
 
             </select>
