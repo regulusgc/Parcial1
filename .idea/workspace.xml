@@ -1,81 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="497e8959-34f2-45a5-97ab-03c9a898962b" name="Default" comment="Puestos de trabajo">
-      <change afterPath="$PROJECT_DIR$/.idea/Parcial1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/Digitadores.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/css/component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/Firma-Electronica-Avanzada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/demi-lovato3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/des.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/digi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/dili.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/est.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/expe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/expii.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pangea-bitacora-510x330.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/requi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/requisitos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/subele-el-volumen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/umg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/usi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/classie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/modernizr-custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/css/component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/Firma-Electronica-Avanzada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/demi-lovato3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/des.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/digi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/dili.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/est.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/expe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/expii.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pangea-bitacora-510x330.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/requi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/requisitos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/subele-el-volumen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/umg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/usi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/classie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/modernizr-custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2018-08-15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/De.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Desarrollador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/Digitalizacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Digitalizacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/Persi.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Personain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/bitacora.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/bitacora.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/dili.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Diligencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/exdili.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/ExpedienteDiligencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/exp.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/ExpedienteRequisito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/expirme.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Expediente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/proy.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Proyectos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/req.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Requisitos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/usi.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Usuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inicio_ventanilla/ventanilla.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicio_ventanilla/ventanilla.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/galleta.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/galleta.php" afterDir="false" />
+    <list default="true" id="497e8959-34f2-45a5-97ab-03c9a898962b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/php/galleta.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+              <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -117,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="71">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -125,8 +52,8 @@
       <file leaf-file-name="Digitadores.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="142" column="71" lean-forward="true" selection-start-line="142" selection-start-column="71" selection-end-line="142" selection-end-column="71" />
+            <state relative-caret-position="326">
+              <caret line="161" selection-start-line="161" selection-end-line="162" />
             </state>
           </provider>
         </entry>
@@ -135,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/forms/Proyectos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+              <caret line="204" column="14" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -209,21 +136,6 @@
               <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
-              <item name="inicio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
-              <item name="inicio_digitadores" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -292,7 +204,7 @@
       <updated>1533758424971</updated>
       <workItem from="1533758426233" duration="825000" />
       <workItem from="1534196075392" duration="24878000" />
-      <workItem from="1534293136383" duration="12670000" />
+      <workItem from="1534293136383" duration="13685000" />
     </task>
     <task id="LOCAL-00001" summary="conexion">
       <created>1534218724295</created>
@@ -322,15 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534308133927</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Puestos de trabajo ya hechos">
+      <created>1534315470056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534315470056</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38373000" />
+    <option name="totallyTimeSpent" value="39388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3290938" />
@@ -368,7 +286,8 @@
     <MESSAGE value="Se organizo prro" />
     <MESSAGE value="ventanilla" />
     <MESSAGE value="Puestos de trabajo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Puestos de trabajo" />
+    <MESSAGE value="Puestos de trabajo ya hechos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Puestos de trabajo ya hechos" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -599,7 +518,7 @@
     <entry file="file://$PROJECT_DIR$/php/galleta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -692,21 +611,21 @@
     <entry file="file://$PROJECT_DIR$/forms/Proyectos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+          <caret line="204" column="14" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="142" column="71" lean-forward="true" selection-start-line="142" selection-start-column="71" selection-end-line="142" selection-end-column="71" />
+        <state relative-caret-position="326">
+          <caret line="161" selection-start-line="161" selection-end-line="162" />
         </state>
       </provider>
     </entry>
