@@ -36,6 +36,9 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
         elseif ($paradonde['ID_UNIDAD']==2){
             header('Location:../inicio_digitadores/Digitadores.php');
         }
+        elseif ($paradonde['ID_UNIDAD']==6){
+            header('Location:../inicio_catalogos/index_catalogos.php');
+        }
         else
         {
             echo "fallaste maje";

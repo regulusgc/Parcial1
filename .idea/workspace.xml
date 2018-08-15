@@ -44,8 +44,13 @@
       <file leaf-file-name="ventanilla.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="1360">
               <caret line="80" selection-start-line="80" selection-end-line="80" />
+=======
+            <state relative-caret-position="156">
+              <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="74" selection-end-column="76" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -53,8 +58,13 @@
       <file leaf-file-name="Digitadores.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="408">
               <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+=======
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="117" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -62,8 +72,13 @@
       <file leaf-file-name="index_catalogos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inicio_catalogos/index_catalogos.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="120">
               <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+=======
+            <state relative-caret-position="153">
+              <caret line="135" column="12" lean-forward="true" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -87,6 +102,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -225,8 +241,12 @@
       <updated>1533758424971</updated>
       <workItem from="1533758426233" duration="825000" />
       <workItem from="1534196075392" duration="24878000" />
+<<<<<<< Updated upstream
       <workItem from="1534293136383" duration="13685000" />
       <workItem from="1534316785397" duration="1473000" />
+=======
+      <workItem from="1534293136383" duration="15511000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="conexion">
       <created>1534218724295</created>
@@ -263,11 +283,29 @@
       <option name="project" value="LOCAL" />
       <updated>1534315470056</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ya solo para insertar pro">
+      <created>1534316557101</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534316557101</updated>
+    </task>
+    <task id="LOCAL-00007" summary="llenando lo que le hizo falta a moi">
+      <created>1534317582396</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1534317582396</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="40861000" />
+=======
+    <option name="totallyTimeSpent" value="41214000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -275,7 +313,12 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1295302" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+=======
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3290938" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
@@ -310,7 +353,9 @@
     <MESSAGE value="ventanilla" />
     <MESSAGE value="Puestos de trabajo" />
     <MESSAGE value="Puestos de trabajo ya hechos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Puestos de trabajo ya hechos" />
+    <MESSAGE value="Ya solo para insertar pro" />
+    <MESSAGE value="llenando lo que le hizo falta a moi" />
+    <option name="LAST_COMMIT_MESSAGE" value="llenando lo que le hizo falta a moi" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -322,6 +367,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/php/galleta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -330,6 +376,11 @@
       </provider>
     </entry>
     <entry file="file://D:/Download/combo/selects.php" />
+=======
+    <entry file="file://D:/Download/combo/selects.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/conexion/settings.ini.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -513,15 +564,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_catalogos/fonts/bpicons/bpicons.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1360">
           <caret line="80" selection-start-line="80" selection-end-line="80" />
+=======
+        <state relative-caret-position="156">
+          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="74" selection-end-column="76" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="408">
           <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
         </state>
@@ -531,13 +591,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="110" />
+=======
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="117" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inicio_catalogos/index_catalogos.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="120">
           <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+=======
+        <state relative-caret-position="153">
+          <caret line="135" column="12" lean-forward="true" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
