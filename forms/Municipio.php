@@ -1,3 +1,23 @@
+<?php
+/*   session_start();
+
+
+   if (isset($_SESSION['autorizado']) == true) {
+
+   } else {
+       require("../libreria/notaNoAutorizado.php");
+   exit;
+   }*/
+require("../conexion/Db.class.php");
+
+if (mysqli_connect_errno())
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$db = new DB();
+$depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +33,25 @@
 
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center" >
+        <form method="post" action="../insertar/InsertarMunicipio.php" class="container text-center" >
             <div class="form-control-lg">
                 <br>
                 <h3>Municipio</h3>
                 <div class="form-control-lg">
                     <label for="select_depto">Elija un Departamento para poder agregar un municipio</label>
                     <br>
-                    <select class="text-lg-center" id="select_depto">
+                    <select class="text-lg-center" id="select_depto" required>
                         <option selected>Elija un departamento</option>
                         <option value="1">Uno</option>
-                        <option value="2">Dos</option>
-                        <option value="3">Tres</option>
+                        <?php
+                        foreach ( $depto as $posicion) { ?>
+                            <option value="<?php echo $posicion['ID_DEPARTAMENTO']?> " ><?php echo $posicion['DESCRIPCION_DEPARTAMENTO'] ?></option>
+                        <?php }
+                        ?>
                     </select>
                 </div>
                 <div class="form-control-lg">
-                    <input type="text" id="municipio" placeholder="Ingrese Municipio" >
+                    <input type="text" name="municipio" id="municipio" placeholder="Ingrese Municipio" required>
                 </div>
             </div>
             <button class="btn btn-dark" type="submit">Enviar Formulario</button>
