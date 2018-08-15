@@ -1,4 +1,18 @@
 <?php
+require("../conexion/Db.class.php");
+$db = new DB();
+session_start();
+$_SESSION['proyecto'] = $_POST['proyecto'];
+$_SESSION['dili'] = $_POST['dili'];
+$_SESSION['user'] = $_POST['user'];
+
+$proyecto = $_SESSION['proyecto'];
+$estamiel = $db->row("SELECT NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE FROM db_prueba.tb_expediente
+ WHERE ID_PROYECTO =:adf",array("adf"=>$proyecto));
+
+
+
+
 
 ?>
 
@@ -41,7 +55,7 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../insertar/InsertarExpDiligencia.php " method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -50,52 +64,11 @@
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">ID Diligencia Expediente </label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID expediente" class="form-control"  type="text">
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Diligencia</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text">
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label" >Login</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Login" class="form-control"  type="text" required>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
         <label class="col-md-4 control-label">Numero de Expediente</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="00555" class="form-control" type="text"readonly="readonly">
+            <input name="numexp" value="<?php echo $estamiel['NUMERO_EXPEDIENTE'];?>" placeholder="00555" class="form-control" type="text"readonly="readonly">
           </div>
         </div>
       </div>
@@ -105,27 +78,28 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="phone" placeholder="2018" class="form-control" type="text"readonly="readonly">
+            <input name="yearexp" value="<?php $estamiel['ANIO_EXPEDIENTE']?>" placeholder="2018" class="form-control" type="text"readonly="readonly">
           </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Fecha Diligencia</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="Date" placeholder="0905154807" class="form-control" type="datetime-local" required>
-          </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Fecha de Diligencia</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input name="date" placeholder="Fecha" class="form-control"  type="date"  >
+                </div>
+            </div>
         </div>
-      </div>
+
       <!-- Text input-->
       <div class="form-group">
         <label class="col-md-4 control-label">Resultado de la Diligencia</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text" required>
+            <input  name="Resultado" placeholder="ID Requisito" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -137,12 +111,12 @@
         <div class="col-md-4">
           <div class="radio">
             <label>
-              <input type="radio" name="hosting" value="Aceptado" /> Si
+              <input type="radio" name="hosting" value="S" /> Si
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="hosting" value="recha" /> No
+              <input type="radio" name="hosting" value="N" /> No
             </label>
           </div>
         </div>

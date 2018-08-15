@@ -54,7 +54,7 @@ print_r($estamiel);
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="ExpedienteDiligenciasP2.php " method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -96,7 +96,7 @@ print_r($estamiel);
             <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="proyecto" class="form-control selectpicker" >
+                    <select name="dili" class="form-control selectpicker" >
                         <option value="">Seleccione</option>
                         <?php
                         foreach ( $estamiel as $posicion) { ?>
@@ -117,7 +117,7 @@ print_r($estamiel);
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Login" class="form-control"  type="text" required>
+            <input name="user" placeholder="Login" class="form-control"  type="text" value="<?php echo $username?>">
           </div>
         </div>
       </div>

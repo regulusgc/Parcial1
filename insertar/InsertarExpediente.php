@@ -8,7 +8,7 @@
 
 require ("../conexion/Db.class.php");
 $def = "default";
-$usuario = "levman";//$_POST['user'];
+$usuario = $_POST['user'];
 $tingreso = $_POST['tingreso'];
 $dsubsidio = $_POST['dsubsidio'];
 $numeroe = $_POST['numeroe'];

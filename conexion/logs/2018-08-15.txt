@@ -1,3 +1,59 @@
+Time : 23:07:39
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 23:01:33
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 23:01:02
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 23:00:31
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 22:59:16
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 22:57:29
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 22:55:10
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
+Time : 22:54:29
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
+Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
+(ID_EXPEDIENTE, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_DILIGENCIA, ID_DILIGENCIA_EXPEDIENTE,  
+ID_USUARIO, FECHA_DILIGENCIA, RESULTADO_DILIGENCIA, DILIGENCIA_FINALIZADA) 
+VALUES(:idEXP,:numExp,:anioExp,:idDili,:id,:Usuario,:fecha,:resultado,:Dilifina)
+
 Time : 20:55:14
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_UNIDAD' in 'where clause'
 Raw SQL : SELECT * FROM db_prueba.tb_cat_diligencias WHERE ID_UNIDAD =:adf
