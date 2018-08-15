@@ -167,7 +167,7 @@ $unidad = $db ->query("SELECT * FROM db_prueba.tb_unidad_trabajo");
           <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning"  href="../inicio/index.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a class="btn btn-warning"  href="../inicio_catalogos/index_catalogos.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
         </div>
       </div>
 
