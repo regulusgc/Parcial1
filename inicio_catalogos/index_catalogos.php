@@ -57,7 +57,9 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
         <div class="pages-nav__item"><a class="link link--page" href="#page-training">Sexo</a></div>
         <div class="pages-nav__item"><a class="link link--page" href="#page-bitacora">TipoIngreso</a></div>
         <div class="pages-nav__item"><a class="link link--page" href="#page-Expediente">Unidad_Trabajo</a></div>
-        <div class="pages-nav__item"><a class="link link--page" href="#page-Usuarios">Destino_Subsidio</a></div>
+        <div class="pages-nav__item"><a class="link link--page" href="#page-dessubsi">Destino_Subsidio</a></div>
+        <div class="pages-nav__item"><a class="link link--page" href="#page-usuario">Usuario</a></div>
+        <div class="pages-nav__item"><a class="link link--page" href="#page-manuals">Desarrolladores</a></div>
 	</nav>
 	<!-- /navigation-->
 	<!-- pages stack -->
@@ -110,19 +112,7 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
 			<img class="poster" src="images/requi.png" alt="img03" />
 		</div>
 
-		<div class="page" id="page-training">
-			<header class="bp-header cf">
-				<h1 class="bp-header__title">Requisitos de Expedientes</h1>
-				<p class="bp-header__desc">Formulario de Requisitos de Expedientes</p>
-				<p class="info">
-					Para añadir informacion necesaria sobre el expediente llene el siguiente formulario
-				</p>
-        <br>
-        <br>
-        <a class="boton_personalizado"  href="../forms/exp.php">Crear</a>
-			</header>
-			<img class="poster" src="images/expii.png" alt="img04" />
-		</div>
+
 
 		<div class="page" id="page-training">
 			<header class="bp-header cf">
@@ -144,86 +134,73 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
         <h1 class="bp-header__title">Tipo Ingreso</h1>
         <p class="bp-header__desc">Tipo de Ingreso</p>
         <p class="info">
-         Para llenar la bitacora es importante llenar el siguiente formulario
+         Tipo de ingreso, ya sea individual, grupal o por constructora o por tu hermanaaaaaaa
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/bitacora.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/tipo_ingreso.php">Crear</a>
       </header>
       <img class="poster" src="images/pangea-bitacora-510x330.png" alt="img05" />
     </div>
 
-    <div class="page" id="page-Usuarios">
+    <div class="page" id="page-Expediente">
       <header class="bp-header cf">
-        <h1 class="bp-header__title">Usuarios</h1>
-        <p class="bp-header__desc">Formulario de Usuarios</p>
+        <h1 class="bp-header__title">Unidad de Trabajo</h1>
+        <p class="bp-header__desc">Formulario de unidades de trabajo</p>
         <p class="info">
-          Para solicitar un usuario o un nuevo usuario
-          por favor llene el siguiente formulario
+         Agregar unidades de trabajo para que todo sea mas ordenado diceeen
 
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/usi.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/unidad_de_trabajo.php">Crear</a>
       </header>
       <img class="poster" src="images/usi.png" alt="img05" />
     </div>
 
-    <div class="page" id="page-Expediente">
+    <div class="page" id="page-dessubsi">
     <header class="bp-header cf">
-      <h1 class="bp-header__title">Expedientes</h1>
-      <p class="bp-header__desc">Formularios de Expedientes</p>
+      <h1 class="bp-header__title">Destino_Subsidio</h1>
+      <p class="bp-header__desc">Formularios de Destinos de Subsidio</p>
       <p class="info">
-        Para llenar un expediente llene el siguiente formulario
+    Diferentes subsisdios que tendran ay ya no se que poner aca
       </p>
       <br>
       <br>
-      <a class="boton_personalizado"  href="../forms/expirme.php">Crear</a>
+      <a class="boton_personalizado"  href="../forms/destino_subsidio.php">Crear</a>
     </header>
     <img class="poster" src="images/Firma-Electronica-Avanzada.png" alt="img05" />
   </div>
 <! >
-    <div class="page" id="page-dili">
+    <div class="page" id="page-usuario">
       <header class="bp-header cf">
-        <h1 class="bp-header__title">Categoria Diligencias</h1>
-        <p class="bp-header__desc">Formularios de Diligencias</p>
+        <h1 class="bp-header__title">Usuario</h1>
+        <p class="bp-header__desc">Formularios de Usuario</p>
         <p class="info">
-          Para agregar una Diligencia  llene el siguiente formulario
+  Agregar usuarios
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/dili.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Usuarios.php">Crear</a>
       </header>
       <img class="poster" src="images/dili.png" alt="img05" />
     </div>
     <!>
-    <div class="page" id="page-digi">
+    <div class="page" id="page-manuals">
       <header class="bp-header cf">
-        <h1 class="bp-header__title">Digitalizacion</h1>
-        <p class="bp-header__desc">Formularios de digitadores</p>
+        <h1 class="bp-header__title">Desarrolladores</h1>
+        <p class="bp-header__desc">Formularios Para Desarrolladores</p>
         <p class="info">
-          Para tener digitalizacion llene el siguiente formulario
+         AGREGAR DESARROLLADORES
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/Digitalizacion.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Desarrollador.php">Crear</a>
       </header>
       <img class="poster" src="images/digi.png" alt="img05" />
     </div>
     <!>
-    <div class="page" id="page-expdili">
-      <header class="bp-header cf">
-        <h1 class="bp-header__title">Expedientes Diligencia</h1>
-        <p class="bp-header__desc">Formularios de Expedientes de diligencias</p>
-        <p class="info">
-          Para llenar un expediente de diligencias llene el siguiente formulario
-        </p>
-        <br>
-        <br>
-        <a class="boton_personalizado"  href="../forms/exdili.php">Crear</a>
-      </header>
-      <img class="poster" src="images/est.png" alt="img05" />
-    </div>
+
 
 	</div>
 	<!-- /pages-stack -->
