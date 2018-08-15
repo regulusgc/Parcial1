@@ -1,3 +1,14 @@
+<?php
+require ("../conexion/Db.class.php");
+
+$db = new DB();
+
+$rol = $db ->query("SELECT * FROM db_prueba.tb_roles");
+$unidad = $db ->query("SELECT * FROM db_prueba.tb_unidad_trabajo");
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,32 +46,22 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action=" ../insertar/InsertarUsuarios.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
       <legend>Usuarios</legend>
 
-      <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Usuario</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label" >Login</label>
+        <label class="col-md-4 control-label" >Username</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="1" class="form-control"  type="text" required>
+            <input name="usuario" placeholder="username" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -70,11 +71,11 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your rol XD jaja</option>
-              <option>pues saber</option>
-              <option>Falta la base de datos</option>
-              <option >HOLIIIIIS</option>
+            <select name="Rol" class="form-control selectpicker" >
+                <option >Please select your Rolin </option>
+                <?php foreach ( $rol as $rolines) { ?>
+                    <option value="<?php echo $rolines['ID_ROL']?> " ><?php echo $rolines['DESCRIPCION_ROL'] ?></option>
+                <?php }?>
 
 
             </select>
@@ -87,11 +88,11 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your unidad XD jaja</option>
-              <option>Reconocimiento</option>
-              <option>Policia militar</option>
-              <option >HOLIIIIIS</option>
+            <select name="Unidad" class="form-control selectpicker" >
+                <option >Please select your Unidad </option>
+                <?php foreach ( $unidad as $uni) { ?>
+                    <option value="<?php echo $uni['ID_UNIDAD_TRABAJO']?> " ><?php echo $uni['DESCRIPCION_UNIDAD'] ?></option>
+                <?php }?>
 
 
             </select>
@@ -101,11 +102,11 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label">Nombre de usuario</label>
+        <label class="col-md-4 control-label">Nombre del usuario</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input  name="first_name" placeholder=" Nombre" class="form-control"  type="text" required>
+            <input  name="Nombre" placeholder=" Nombre" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -113,16 +114,16 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label">EStatus</label>
+        <label class="col-md-4 control-label">Estatus</label>
         <div class="col-md-4">
           <div class="radio">
             <label>
-              <input type="radio" name="hosting" value="Aceptado" /> Disponible
+              <input type="radio" name="hosting" value="A" /> Activo
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="hosting" value="recha" /> Desconectado
+              <input type="radio" name="hosting" value="I" /> Inactivo
             </label>
           </div>
         </div>
@@ -135,14 +136,22 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
-            <input name="password" placeholder="Contraseña" class="form-control"  type="text" required>
+            <input name="password" placeholder="Contraseña" class="form-control"  type="password" required>
           </div>
         </div>
       </div>
 
 
       <!-- Text input-->
-
+        <div class="form-group">
+            <label class="col-md-4 control-label" >Apellido</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="Apellido" placeholder="Apellido" class="form-control"  type="text" required>
+                </div>
+            </div>
+        </div>
 
       <!-- Select Basic -->
 
