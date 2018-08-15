@@ -20,8 +20,10 @@
                     <input type="text" id="departamento" placeholder="Ingrese Departamento" >
                 </div>
             </div>
-            <br>
             <button class="btn btn-dark" type="submit">Enviar Formulario</button>
+            <div class="form-control-lg">
+                <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
+            </div>
         </form>
     </div>
 </div>

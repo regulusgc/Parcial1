@@ -1,3 +1,21 @@
+<?php
+/*   session_start();
+
+
+   if (isset($_SESSION['autorizado']) == true) {
+
+   } else {
+       require("../libreria/notaNoAutorizado.php");
+   exit;
+   }*/
+require("../conexion/logs/Db.Class.php");
+
+if (mysqli_connect_errno())
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +34,9 @@
                 <input id="DESCRIPCION_INGRESO" type="text" placeholder="Descripcion">
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
+            <div class="form-control-lg">
+                <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
+            </div>
         </form>
     </div>
 </div>

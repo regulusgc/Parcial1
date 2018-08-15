@@ -17,6 +17,9 @@
                 <input id="SEXO_NOMBRE" type="text" placeholder="Nombre Sexo">
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
+            <div class="form-control-lg">
+                <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
+            </div>
         </form>
     </div>
 </div>
