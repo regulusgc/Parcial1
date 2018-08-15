@@ -39,6 +39,16 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
         elseif ($paradonde['ID_UNIDAD']==6){
             header('Location:../inicio_catalogos/index_catalogos.php');
         }
+        elseif ($paradonde['ID_UNIDAD']==3){
+            header('Location:../inicio_juridico/juridico.php');
+        }
+        elseif ($paradonde['ID_UNIDAD']==4){
+            header('Location:../inicio_financiero/financiero.php');
+        }
+
+        elseif ($paradonde['ID_UNIDAD']==5){
+            header('Location:../inicio_social/social.php');
+        }
         else
         {
             echo "fallaste maje";

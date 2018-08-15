@@ -1,3 +1,20 @@
+<?php
+require("../conexion/Db.class.php");
+
+$db = new DB();
+$project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
+$username = $_COOKIE['username'];
+$id = $db->row("SELECT ID_UNIDAD FROM tb_usuarios WHERE USERNAME = :f ", array("f"=>$username));
+
+$KAMISAMA = $id["ID_UNIDAD"];
+print_r($KAMISAMA);
+$estamiel = $db->query("SELECT * FROM db_prueba.tb_cat_diligencias WHERE ID_UNIDAD_TRABAJO =:adf",array("adf"=>$KAMISAMA));
+print_r($estamiel);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +27,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/dis_general.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <title>Expediente de Diligencias</title>
+  <title>Expediente de Diligencias parte 1</title>
 </head>
 <body>
 <nav>
@@ -41,7 +58,7 @@
     <fieldset>
 
       <!-- Form Name -->
-      <legend>Expediente de Diligencias!</legend>
+      <legend>Expediente de Diligencias! PARTE 1</legend>
 
       <!-- Text input-->
 
@@ -54,25 +71,44 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID expediente" class="form-control"  type="text">
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Diligencia</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text">
-          </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Proyecto</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="proyecto" class="form-control selectpicker" >
+                        <option value="">Seleccione</option>
+                        <?php
+                        foreach ( $project as $posicion) { ?>
+                            <option value="<?php echo $posicion['ID_PROYECTO']?> " ><?php echo $posicion['NOMBRE_PROYECTO'] ?></option>
+                        <?php }
+                        ?>
+
+
+                    </select>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">ID Diligencia</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="proyecto" class="form-control selectpicker" >
+                        <option value="">Seleccione</option>
+                        <?php
+                        foreach ( $estamiel as $posicion) { ?>
+                            <option value="<?php echo $posicion['ID_DILIGENCIA']?> " ><?php echo $posicion['DESCRIPCION_DILIGENCIA'] ?></option>
+                        <?php }
+                        ?>
+
+
+                    </select>
+                </div>
+            </div>
+        </div>
 
       <!-- Text input-->
 
@@ -86,63 +122,7 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Numero de Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="00555" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Año del Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="phone" placeholder="2018" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Fecha Diligencia</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="Date" placeholder="0905154807" class="form-control" type="datetime-local" required>
-          </div>
-        </div>
-      </div>
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Resultado de la Diligencia</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text" required>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- radio checks -->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Diligencia Finalizada</label>
-        <div class="col-md-4">
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="Aceptado" /> Si
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="recha" /> No
-            </label>
-          </div>
-        </div>
-      </div>
 
       <!-- Text area -->
 
