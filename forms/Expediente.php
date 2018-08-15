@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="../inicio/favicon.ico">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="../Expediente/dis_expedientesse.css">
+  <link rel="stylesheet" href="../css/dis_general.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <title>Expedientes</title>
@@ -44,15 +44,7 @@
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Bitacora</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
+
 
       <!-- Text input-->
 
@@ -215,7 +207,7 @@
           <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning"  href="../inicio/index.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a class="btn btn-warning"  href="../inicio_digitadores/Digitadores.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
         </div>
       </div>
 

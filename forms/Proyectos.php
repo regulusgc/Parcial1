@@ -14,7 +14,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="../inicio_digitadores/favicon.ico">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
@@ -201,7 +201,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
           <button type="submit" class="btn btn-warning" id="enviar" >Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning"  href="../inicio/index.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a class="btn btn-warning"  href="../inicio_digitadores/Digitadores.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
         </div>
       </div>
 

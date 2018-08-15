@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="497e8959-34f2-45a5-97ab-03c9a898962b" name="Default" comment="Puestos de trabajo">
+      <change afterPath="$PROJECT_DIR$/.idea/Parcial1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/Digitadores.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/css/component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/Firma-Electronica-Avanzada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/demi-lovato3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/des.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/digi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/dili.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/est.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/expe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/expii.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pangea-bitacora-510x330.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/requi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/requisitos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/subele-el-volumen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/umg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/images/usi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_digitadores/js/modernizr-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/css/component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/Firma-Electronica-Avanzada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/demi-lovato3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/des.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/digi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/dili.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/est.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/expe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/expii.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pangea-bitacora-510x330.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/requi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/requisitos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/subele-el-volumen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/umg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/images/usi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio_ventanilla/js/modernizr-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2018-08-15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/De.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Desarrollador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/Digitalizacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Digitalizacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/Persi.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Personain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/bitacora.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/bitacora.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/dili.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Diligencias.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/exdili.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/ExpedienteDiligencias.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/exp.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/ExpedienteRequisito.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/expirme.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Expediente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/proy.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Proyectos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/req.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Requisitos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/usi.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/Usuarios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicio_ventanilla/ventanilla.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicio_ventanilla/ventanilla.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/galleta.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/galleta.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="lou.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/lou.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="galleta.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/galleta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inicio/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1201">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ventanilla.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Digitadores.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="142" column="71" lean-forward="true" selection-start-line="142" selection-start-column="71" selection-end-line="142" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Proyectos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forms/Proyectos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/settings.ini.php" />
+        <option value="$PROJECT_DIR$/Log.class.php" />
+        <option value="$PROJECT_DIR$/Db.class.php" />
+        <option value="$PROJECT_DIR$/login/lou.php" />
+        <option value="$PROJECT_DIR$/cat_pro/proy.php" />
+        <option value="$PROJECT_DIR$/css/dis_general.css" />
+        <option value="$PROJECT_DIR$/forms/proy.php" />
+        <option value="$PROJECT_DIR$/forms/req.php" />
+        <option value="$PROJECT_DIR$/forms/expirme.php" />
+        <option value="$PROJECT_DIR$/forms/Persi.php" />
+        <option value="$PROJECT_DIR$/php/galleta.php" />
+        <option value="$PROJECT_DIR$/inicio_ventanilla/ventanilla.php" />
+        <option value="$PROJECT_DIR$/forms/Diligencias.php" />
+        <option value="$PROJECT_DIR$/forms/Desarrollador.php" />
+        <option value="$PROJECT_DIR$/forms/Expediente.php" />
+        <option value="$PROJECT_DIR$/forms/ExpedienteDiligencias.php" />
+        <option value="$PROJECT_DIR$/forms/ExpedienteRequisito.php" />
+        <option value="$PROJECT_DIR$/forms/Personain.php" />
+        <option value="$PROJECT_DIR$/inicio_digitadores/Digitadores.php" />
+        <option value="$PROJECT_DIR$/forms/Usuarios.php" />
+        <option value="$PROJECT_DIR$/forms/Requisitos.php" />
+        <option value="$PROJECT_DIR$/forms/Digitalizacion.php" />
+        <option value="$PROJECT_DIR$/forms/bitacora.php" />
+        <option value="$PROJECT_DIR$/forms/Proyectos.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="723" />
+    <option name="width" value="643" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
+              <item name="inicio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Parcial1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Parcial1" type="462c0819:PsiDirectoryNode" />
+              <item name="inicio_digitadores" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Download/combo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Regulus\PhpstormProjects\Parcial1\conexion" />
+      <recent name="C:\Users\Regulus\PhpstormProjects\Parcial1\forms" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Digitadores.php">
+    <configuration name="Digitadores.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Parcial1/inicio_digitadores/Digitadores.php" />
+    <configuration name="Requisitos.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Parcial1/forms/Requisitos.php" />
+    <configuration name="exp.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Parcial1/forms/exp.php" />
+    <configuration name="lou.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Parcial1/login/lou.php" />
+    <configuration name="ventanilla.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Parcial1/inicio_ventanilla/ventanilla.php" />
+    <list>
+      <item itemvalue="JavaScript Debug.lou.php" />
+      <item itemvalue="JavaScript Debug.ventanilla.php" />
+      <item itemvalue="JavaScript Debug.exp.php" />
+      <item itemvalue="JavaScript Debug.Digitadores.php" />
+      <item itemvalue="JavaScript Debug.Requisitos.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Digitadores.php" />
+        <item itemvalue="JavaScript Debug.Requisitos.php" />
+        <item itemvalue="JavaScript Debug.ventanilla.php" />
+        <item itemvalue="JavaScript Debug.lou.php" />
+        <item itemvalue="JavaScript Debug.exp.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="497e8959-34f2-45a5-97ab-03c9a898962b" name="Default" comment="" />
+      <created>1533758424971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533758424971</updated>
+      <workItem from="1533758426233" duration="825000" />
+      <workItem from="1534196075392" duration="24878000" />
+      <workItem from="1534293136383" duration="12670000" />
+    </task>
+    <task id="LOCAL-00001" summary="conexion">
+      <created>1534218724295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534218724295</updated>
+    </task>
+    <task id="LOCAL-00002" summary="logines lisTOS MAS OTROS LLENADOS&#10; prros">
+      <created>1534243968029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534243968029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se organizo prro">
+      <created>1534302620734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534302620734</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ventanilla">
+      <created>1534308133927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534308133927</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="38373000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290938" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12811127" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="conexion" />
+    <MESSAGE value="logines listo prros" />
+    <MESSAGE value="logines lisTOS MAS OTROS LLENADOS&#10; prros" />
+    <MESSAGE value="Se organizo prro" />
+    <MESSAGE value="ventanilla" />
+    <MESSAGE value="Puestos de trabajo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Puestos de trabajo" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>$login 	 =     $db-&gt;row(&quot;SELECT USERNAME, CLAVE FROM tb_usuarios WHERE USERNAME = :f AND CLAVE = :a&quot;, array(&quot;f&quot;=&gt;$username,&quot;a&quot;=&gt;$password));</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/login/lou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/galleta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Download/combo/selects.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/settings.ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/Db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4131">
+          <caret line="248" lean-forward="true" selection-start-line="248" selection-end-line="248" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/Log.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/proy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="156" column="30" lean-forward="true" selection-start-line="156" selection-start-column="30" selection-end-line="156" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/lou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/settings.ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/easyCRUD/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/easyCRUD/Person.class.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/easyCRUD/easyCRUD.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Db.php" />
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/Db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/pdo/indieteq-php-my-sql-pdo-database-class-master/Log.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="70" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Download/buscar.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Download/grabar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Download/buscar2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Download/combo/selects.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/dis_general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuarios/dis_usuarios.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/Db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4216">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_ventanilla/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/Log.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/settings.ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/exp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2023">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/expirme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/proy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Persi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/usi.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/req.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1201">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/galleta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Diligencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="132" column="53" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Desarrollador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="130" column="63" selection-start-line="130" selection-start-column="63" selection-end-line="130" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/lou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/2018-08-15.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_digitadores/fonts/bpicons/bpicons.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_ventanilla/fonts/bpicons/bpicons.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Requisitos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="116" column="12" lean-forward="true" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Usuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/bitacora.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Digitalizacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Expediente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="210" column="14" lean-forward="true" selection-start-line="210" selection-start-column="14" selection-end-line="210" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/ExpedienteDiligencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/ExpedienteRequisito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Personain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="210" column="12" lean-forward="true" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/Proyectos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_ventanilla/ventanilla.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inicio_digitadores/Digitadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="142" column="71" lean-forward="true" selection-start-line="142" selection-start-column="71" selection-end-line="142" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

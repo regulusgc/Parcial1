@@ -31,10 +31,10 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
     if (isset($paradonde)== true )
     {
         if ($paradonde['ID_UNIDAD']==1 ){
-            header('Location:../forms/req.php');
+            header('Location:../inicio_ventanilla/ventanilla.php');
         }
         elseif ($paradonde['ID_UNIDAD']==2){
-            header('Location:../forms/proy.php');
+            header('Location:../inicio_digitadores/Digitadores.php');
         }
         else
         {

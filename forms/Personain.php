@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="../inicio_digitadores/favicon.ico">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<link rel="stylesheet" href="../Persona/dis_persona.css">
-  <title>Trabajador</title>
+<link rel="stylesheet" href="../css/dis_general.css">
+  <title>Personas Involucradas</title>
 </head>
 <body>
 <nav>
@@ -42,7 +42,7 @@
     <fieldset>
 
       <!-- Form Name -->
-      <legend>Trabajador</legend>
+      <legend>Personas Involucradas</legend>
 
       <div class="form-group">
         <label class="col-md-4 control-label">ID Solicitante</label>
@@ -206,7 +206,7 @@
           <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning"  href="../inicio/index.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a class="btn btn-warning"   href="../inicio_digitadores/Digitadores.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
         </div>
       </div>
 

@@ -89,7 +89,7 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/req.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Requisitos.php">Crear</a>
 			</header>
 			<img class="poster" src="images/requi.png" alt="img03" />
 		</div>
