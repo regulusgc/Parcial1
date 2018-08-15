@@ -1,11 +1,12 @@
 <?php
-/*
-$submitted = isset($_POST['username']) && isset($_POST['password']);
-$estado = false;
-if ($submitted) {
-  setcookie('username', $_POST['username'], time()+86400, '/');
-$estado = true;
-}*/
+require ("../conexion/Db.class.php");
+
+$db = new DB();
+$username = $_COOKIE['username'];
+
+$completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE USERNAME = :t ",array("t"=>$username));
+
+
 
 ?>
 
@@ -16,7 +17,7 @@ $estado = true;
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Formularios</title>
+	<title>Catalogos</title>
 	<meta name="description" content="Blueprint: A basic template for a page stack navigation effect" />
 	<meta name="keywords" content="blueprint, template, html, css, page stack, 3d, perspective, navigation, menu" />
 	<meta name="author" content="Codrops" />
@@ -50,9 +51,9 @@ $estado = true;
 
 	<nav class="pages-nav">
 		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Home</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-docu">Departamento</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-manuals">Municipio</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-custom">Rol</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-depto">Departamento</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-Municipio">Municipio</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-software">Rol</a></div>
         <div class="pages-nav__item"><a class="link link--page" href="#page-training">Sexo</a></div>
         <div class="pages-nav__item"><a class="link link--page" href="#page-bitacora">TipoIngreso</a></div>
         <div class="pages-nav__item"><a class="link link--page" href="#page-Expediente">Unidad_Trabajo</a></div>
@@ -65,8 +66,11 @@ $estado = true;
 		<div class="page" id="page-home">
 			<!-- Blueprint header -->
 			<header class="bp-header cf">
-				<span class="bp-header__present">Desarrollo Web <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
-				<h1 class="bp-header__title">Unidad ADMIN</h1>
+                <span class="bp-header__present">CATALOGOS <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+                <h1 class="bp-header__title">Bienvenido</h1>
+                <p class="bp-header__desc">Actualilzar Catalogos </p>
+                <p class="bp-header__title"><?php echo $completo['NOMBRE']; ?></p>
+                <p class="bp-header__title"><?php echo $completo['APELLIDO']; ?></p>
 			</header>
 			<img class="poster" src="images/umg.png" alt="img01" />
 		</div>
@@ -74,39 +78,39 @@ $estado = true;
 		<div class="page" id="page-depto">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Departamento</h1>
-				<p class="bp-header__desc">Formulario de departamento/p>
+				<p class="bp-header__desc">Formulario de departamento</p>
                 <br>
-                <a class="boton_personalizado"  href="../forms/proy.php">Crear</a>
+                <a class="boton_personalizado"  href="../forms/Departamento.php">Crear</a>
 			</header>
 			<img class="poster" src="images/pro.png" alt="img06" />
 		</div>
+
 		<div class="page" id="page-Municipio">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Municipio</h1>
 				<p class="bp-header__desc">Formulario de Municipio</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/De.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Municipio.php">Crear</a>
 			</header>
 			<img class="poster" src="images/des.png" alt="img02" />
 		</div>
 
 		<div class="page" id="page-software">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Requisitos</h1>
-				<p class="bp-header__desc">Formulario de Requisitos</p>
+				<h1 class="bp-header__title">Rol</h1>
+				<p class="bp-header__desc">Formulario de Roles</p>
 				<p class="info">
-					Para dar a conocer la descripcion del requisito, las observaciones, tanto como obligatorios o no llene el siguiente
-          requisito
+					AGREGAR LOS ROLES DE LOS USUARIOS
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/req.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Roles.php">Crear</a>
 			</header>
 			<img class="poster" src="images/requi.png" alt="img03" />
 		</div>
 
-		<div class="page" id="page-custom">
+		<div class="page" id="page-training">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Requisitos de Expedientes</h1>
 				<p class="bp-header__desc">Formulario de Requisitos de Expedientes</p>
@@ -122,23 +126,23 @@ $estado = true;
 
 		<div class="page" id="page-training">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Trabajadores</h1>
-				<p class="bp-header__desc">Expediente de Trabajadores</p>
+				<h1 class="bp-header__title">Sexo</h1>
+				<p class="bp-header__desc">Expediente de Sexo</p>
 				<p class="info">
-					Para agregar informacion sobre las personas involucradas en la empresa y los proyectos por favor
-          llene el siguiente Formulario
+					AGREGAR LOS DIFERENTES SEXOS PORQUE AHORA CADA MAJE SALE CON QUE QUIERE SER
+                    PERRO O SABER QUE DIABLOS SI NO ME  DEMANDAN LOS DE LA LGTBI
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../forms/Persi.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/sexo.php">Crear</a>
 			</header>
 			<img class="poster" src="images/pers.png" alt="img05" />
 		</div>
 
     <div class="page" id="page-bitacora">
       <header class="bp-header cf">
-        <h1 class="bp-header__title">Bitacora</h1>
-        <p class="bp-header__desc">Bitacora de Auditoria</p>
+        <h1 class="bp-header__title">Tipo Ingreso</h1>
+        <p class="bp-header__desc">Tipo de Ingreso</p>
         <p class="info">
          Para llenar la bitacora es importante llenar el siguiente formulario
         </p>
