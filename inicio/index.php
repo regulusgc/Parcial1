@@ -95,7 +95,7 @@ $estado = true;
 				</p>
         <br>
         <br>
-      <a class="boton_personalizado"  href="../cat_pro/proy.php">Crear</a>
+      <a class="boton_personalizado"  href="../forms/proy.php">Crear</a>
 			</header>
 			<img class="poster" src="images/pro.png" alt="img06" />
 
@@ -113,7 +113,7 @@ $estado = true;
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Des/De.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/De.php">Crear</a>
 			</header>
 			<img class="poster" src="images/des.png" alt="img02" />
 		</div>
@@ -128,7 +128,7 @@ $estado = true;
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Requisitos/req.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/req.php">Crear</a>
 			</header>
 			<img class="poster" src="images/requi.png" alt="img03" />
 		</div>
@@ -142,7 +142,7 @@ $estado = true;
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Expedientes/exp.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/exp.php">Crear</a>
 			</header>
 			<img class="poster" src="images/expii.png" alt="img04" />
 		</div>
@@ -157,7 +157,7 @@ $estado = true;
 				</p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Persona/Persi.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Persi.php">Crear</a>
 			</header>
 			<img class="poster" src="images/pers.png" alt="img05" />
 		</div>
@@ -171,7 +171,7 @@ $estado = true;
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../bita/bitacora.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/bitacora.php">Crear</a>
       </header>
       <img class="poster" src="images/pangea-bitacora-510x330.png" alt="img05" />
     </div>
@@ -187,7 +187,7 @@ $estado = true;
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../usuarios/usi.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/usi.php">Crear</a>
       </header>
       <img class="poster" src="images/usi.png" alt="img05" />
     </div>
@@ -201,7 +201,7 @@ $estado = true;
       </p>
       <br>
       <br>
-      <a class="boton_personalizado"  href="../Expediente/expirme.php">Crear</a>
+      <a class="boton_personalizado"  href="../forms/expirme.php">Crear</a>
     </header>
     <img class="poster" src="images/Firma-Electronica-Avanzada.png" alt="img05" />
   </div>
@@ -215,7 +215,7 @@ $estado = true;
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Diligencias/dili.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/dili.php">Crear</a>
       </header>
       <img class="poster" src="images/dili.png" alt="img05" />
     </div>
@@ -229,7 +229,7 @@ $estado = true;
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../Digita/Digitalizacion.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/Digitalizacion.php">Crear</a>
       </header>
       <img class="poster" src="images/digi.png" alt="img05" />
     </div>
@@ -243,7 +243,7 @@ $estado = true;
         </p>
         <br>
         <br>
-        <a class="boton_personalizado"  href="../expeDiligencia/exdili.php">Crear</a>
+        <a class="boton_personalizado"  href="../forms/exdili.php">Crear</a>
       </header>
       <img class="poster" src="images/est.png" alt="img05" />
     </div>

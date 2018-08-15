@@ -1,5 +1,5 @@
 <?php
-require("../Db.class.php");
+require("../conexion/Db.class.php");
 
 $db = new DB();
 
@@ -18,10 +18,10 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="dis_pro.css">
+  <link rel="stylesheet" href="../css/dis_general.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <!script src="validacion.js">/script>>
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Proyectos</title>

@@ -6,10 +6,12 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="dis_expedientesse.css">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <title>Expedientes</title>
+<link rel="stylesheet" href="../Persona/dis_persona.css">
+  <title>Trabajador</title>
 </head>
 <body>
 <nav>
@@ -40,12 +42,10 @@
     <fieldset>
 
       <!-- Form Name -->
-      <legend>Expedientes</legend>
-
-      <!-- Text input-->
+      <legend>Trabajador</legend>
 
       <div class="form-group">
-        <label class="col-md-4 control-label">ID Bitacora</label>
+        <label class="col-md-4 control-label">ID Solicitante</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
@@ -54,71 +54,127 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label class="col-md-4 control-label">ID Expediente Requisito</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Relacion Familiar</label>
+        <div class="col-md-4 selectContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your Relacion XD jaja</option>
+              <option>No se a que se refiere esto</option>
+              <option>Buena</option>
+              <option >Mala</option>
+
+
+            </select>
+          </div>
+        </div>
+      </div>
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label" >Login</label>
+        <label class="col-md-4 control-label">Primer Nombre</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Login" class="form-control"  type="text" >
+            <input  name="first_name" placeholder="Primer Nombre" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
-
       <div class="form-group">
-        <label class="col-md-4 control-label">Tipo de Ingreso</label>
-        <div class="col-md-4 selectContainer">
+        <label class="col-md-4 control-label">Segundo Nombre</label>
+        <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your tipo XD jaja</option>
-              <option>pues saber</option>
-              <option>Falta la base de datos</option>
-              <option >HOLIIIIIS</option>
-
-
-            </select>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="first_name" placeholder="Segundo Nombre" class="form-control"  type="text">
           </div>
         </div>
       </div>
 
+      <!-- Text input-->
+
       <div class="form-group">
-        <label class="col-md-4 control-label">Tipo de solicitud de subsidio</label>
-        <div class="col-md-4 selectContainer">
+        <label class="col-md-4 control-label" >Primer Apellido</label>
+        <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your subsidio XD jaja</option>
-              <option>Reconocimiento</option>
-              <option>Policia militar</option>
-              <option >HOLIIIIIS</option>
-
-
-            </select>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Primer Apellido" class="form-control"  type="text"required>
           </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Proyecto</label>
-        <div class="col-md-4 selectContainer">
+        <label class="col-md-4 control-label" >Segundo Apellido</label>
+        <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your Proyecto XD jaja</option>
-              <option>Reconocimiento</option>
-              <option>Policia militar</option>
-              <option >HOLIIIIIS</option>
-
-
-            </select>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Segundo Apellido" class="form-control"  type="text" >
           </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Fecha de regisstro</label>
+        <label class="col-md-4 control-label" >Apellido de Casada</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Apellido de Casada" class="form-control"  type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Telefono #</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="(845)555-1212" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Direccion</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Direccion" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Numero de Documento</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="Numero" class="form-control"  type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Fecha de Nacimiento</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
@@ -127,86 +183,21 @@
         </div>
       </div>
 
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Monto Aproximado del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-            <input name="address" placeholder="Monto" class="form-control" type="text" required>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Longitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="email" placeholder="Longitud" class="form-control"  type="text" required>
-          </div>
-        </div>
-      </div>
-
-
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Latitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="phone" placeholder="Latitud" class="form-control" type="text" required>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">OBservaciones</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="comment" placeholder="OBservaciones"></textarea>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Numero de Expediente</label>
+        <label class="col-md-4 control-label">Expediente #</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="00555" class="form-control" type="text"readonly="readonly">
+            <input name="phone" placeholder="0905154807" class="form-control" type="text" required>
           </div>
         </div>
       </div>
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Año del Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="phone" placeholder="2018" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <!-- Select Basic -->
-
-
 
       <!-- Success message -->
-      <div class="alert alert-success" role="alert" id="success_message"> <i class="glyphicon glyphicon-thumbs-up"></i> Gracias ahora ya se quien sos</div>
+      <div class="alert alert-success" role="alert" id="success_message"> <i class="glyphicon glyphicon-thumbs-up"></i>
+        Su solicitud jamas llegara, no se preocupe, no nos llame, nosotros lo llamaremos ;)  (claroooooo)</div>
 
       <!-- Button -->
       <div class="form-group">

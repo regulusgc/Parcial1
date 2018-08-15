@@ -6,7 +6,7 @@
  * Time: 1:13 AM
  */
 
-require("../Db.class.php");
+require("../conexion/Db.class.php");
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -31,10 +31,10 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
     if (isset($paradonde)== true )
     {
         if ($paradonde['ID_UNIDAD']==1 ){
-            header('Location:../Requisitos/req.php');
+            header('Location:../forms/req.php');
         }
         elseif ($paradonde['ID_UNIDAD']==2){
-            header('Location:../cat_pro/proy.php');
+            header('Location:../forms/proy.php');
         }
         else
         {
