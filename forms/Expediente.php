@@ -1,3 +1,23 @@
+<?php
+
+require("../conexion/Db.class.php");
+
+$db = new DB();
+
+$username = $_COOKIE['username'];
+$id = $db->row("SELECT ID_USUARIO FROM tb_usuarios WHERE USERNAME = :f ", array("f"=>$username));
+
+$tingreso = $db->query("SELECT * FROM db_prueba.tb_tipo_ingreso ");
+
+$desSub = $db->query("SELECT * FROM db_prueba.tb_cat_destino_subsidio ");
+
+$project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +56,7 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../insertar/InsertarExpediente.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -49,11 +69,11 @@
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label" >Login</label>
+        <label class="col-md-4 control-label" >Usuario</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Login" class="form-control"  type="text" >
+            <input name="user" placeholder="login" class="form-control"  type="text" value="<?php echo $username?>" >
           </div>
         </div>
       </div>
@@ -63,11 +83,13 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your tipo XD jaja</option>
-              <option>pues saber</option>
-              <option>Falta la base de datos</option>
-              <option >HOLIIIIIS</option>
+            <select name="tingreso" class="form-control selectpicker" >
+                <option value="">Seleccione</option>
+                <?php
+                foreach ( $tingreso as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_TIPO_INGRESO']?> " ><?php echo $posicion['DESCRIPCION_INGRESO'] ?></option>
+                <?php }
+                ?>
 
 
             </select>
@@ -80,28 +102,53 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your subsidio XD jaja</option>
-              <option>Reconocimiento</option>
-              <option>Policia militar</option>
-              <option >HOLIIIIIS</option>
+            <select name="dsubsidio" class="form-control selectpicker" >
+                <option value="">Seleccione</option>
+                <?php
+                foreach ( $desSub as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_TIPO_SOILCITUD_SUBSIDIO']?> " ><?php echo $posicion['DESCRIPCION'] ?></option>
+                <?php }
+                ?>
 
 
             </select>
           </div>
         </div>
       </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Numero de Expediente</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input name="numeroe" placeholder="" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Año del Expediente</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input name="yearexp" placeholder="" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+
 
       <div class="form-group">
         <label class="col-md-4 control-label">Proyecto</label>
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your Proyecto XD jaja</option>
-              <option>Reconocimiento</option>
-              <option>Policia militar</option>
-              <option >HOLIIIIIS</option>
+            <select name="proyecto" class="form-control selectpicker" >
+                <option value="">Seleccione</option>
+                <?php
+                foreach ( $project as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_PROYECTO']?> " ><?php echo $posicion['NOMBRE_PROYECTO'] ?></option>
+                <?php }
+                ?>
 
 
             </select>
@@ -114,7 +161,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="city" placeholder="Fecha" class="form-control"  type="date" required>
+            <input name="fecha" placeholder="Fecha" class="form-control"  type="date" required>
           </div>
         </div>
       </div>
@@ -126,7 +173,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-            <input name="address" placeholder="Monto" class="form-control" type="text" required>
+            <input name="monto" placeholder="Monto" class="form-control" type="text" required>
           </div>
         </div>
       </div>
@@ -137,7 +184,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="email" placeholder="Longitud" class="form-control"  type="text" required>
+            <input name="longitud" placeholder="Longitud" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -150,7 +197,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="phone" placeholder="Latitud" class="form-control" type="text" required>
+            <input name="latitud" placeholder="Latitud" class="form-control" type="text" required>
           </div>
         </div>
       </div>
@@ -163,32 +210,14 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="comment" placeholder="OBservaciones"></textarea>
+            <textarea class="form-control" name="obs" placeholder="OBservaciones"></textarea>
           </div>
         </div>
       </div>
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Numero de Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="00555" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Año del Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="phone" placeholder="2018" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
 
 

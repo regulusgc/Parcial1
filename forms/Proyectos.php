@@ -7,6 +7,9 @@ $depto   =  $db->query("SELECT * FROM db_prueba.tb_cat_departamento ORDER BY ID_
 
 $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
 
+$DES = $db->query("SELECT * FROM db_prueba.tb_desarrolladores ");
+
+
 
 ?>
 
@@ -23,7 +26,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>Proyectos</title>
 </head>
 <body>
@@ -52,7 +55,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
 <div class="container" id="fondo">
 
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../insertar/InsertarProyecto.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -77,8 +80,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="first_name" placeholder="Proyecto" class="form-control"  type="text" id="nombre"
-                   required pattern="[A-Za-z0-9]+">
+            <input name="proyecto" placeholder="Proyecto" class="form-control"  type="text"  required pattern="[A-Za-z0-9]+">
           </div>
         </div>
       </div>
@@ -89,8 +91,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="cantidad" placeholder="Longitud" class="form-control"  type="text" id="longitud"
-                   required pattern="[A-Za-z0-9]+">
+            <input name="longitud" placeholder="Longitud" class="form-control"  type="text"  required >
           </div>
         </div>
       </div>
@@ -103,8 +104,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="cantidad" placeholder="Latitud" class="form-control" type="text" id="lat"
-                   required pattern="[A-Za-z0-9]+">
+            <input name="latitud" placeholder="Latitud" class="form-control" type="text"required >
           </div>
         </div>
       </div>
@@ -116,8 +116,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-            <input name="cantidad" placeholder="Monto" class="form-control" type="text" id="dinero"
-                   required pattern="[A-Za-z0-9]+">
+            <input name="monto" placeholder="Monto" class="form-control" type="text" required >
           </div>
         </div>
       </div>
@@ -129,7 +128,7 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="date" placeholder="Fecha" class="form-control"  type="date" id="fecha" required>
+            <input name="date" placeholder="Fecha" class="form-control"  type="date"  required>
           </div>
         </div>
       </div>
@@ -142,11 +141,14 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
 
-            <select name="depto" class="form-control selectpicker" required="required" >
-                <option >Please select your Depto </option>
-                <?php foreach ( $depto as $posicion) { ?>
-              <option value="<?php echo $posicion['ID_DEPARTAMENTO']?> " ><?php echo $posicion['DESCRIPCION_DEPARTAMENTO'] ?></option>
-              <?php }?>
+            <select name="depto" class="form-control selectpicker" required="required" id="depto" >
+                <option value="">Seleccione</option>
+                <?php
+                foreach ( $depto as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_DEPARTAMENTO']?> " ><?php echo $posicion['DESCRIPCION_DEPARTAMENTO'] ?></option>
+                <?php }
+                ?>
+
             </select>
           </div>
         </div>
@@ -159,11 +161,12 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your Municipio XD jaja</option>
+            <select name="mpio" class="form-control selectpicker" id="mpio">
+                <option value="">Seleccione</option>
                 <?php
-
-
+                foreach ( $mpio as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_MUNICIPIO']?> " ><?php echo $posicion['DESCRIPCION_MUNICIPIO'] ?></option>
+                <?php }
                 ?>
 
 
@@ -179,11 +182,13 @@ $mpio = $db->query("SELECT * FROM db_prueba.tb_cat_municipios ");
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
+            <select name="desarrollador" class="form-control selectpicker" >
               <option value=" " >Please select your Desarrollador XD jaja</option>
-              <option>Yo quien mas</option>
-              <option>Regulus M</option>
-              <option >Rene Gonzalez</option>
+                <?php
+                foreach ( $DES as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_DESARROLLADOR']?> " ><?php echo $posicion['NOMBRE_DESARROLLADOR'] ?></option>
+                <?php }
+                ?>
 
 
             </select>

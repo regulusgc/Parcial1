@@ -23,9 +23,9 @@ VALUES(:i,:ursa,:r,:unidad,:nom,:est,:pass,:apellido)",
     array("i"=>"$def","ursa"=>"$user","r"=>"$rolin","unidad"=>"$unity","nom"=>"$nombre","est"=>"$status","pass"=>"$contra","apellido"=>"$apellido"));
 
 if ($insert){
-    header('Location:../inicio_catalogos/index_catalogos.php');
+    header("Location:../forms/Usuarios.php");
     echo "<script> alert('Insertaste');
-    window.location='../inicio_catalogos/index_catalogos.php'
+    window.location='../forms/Usuarios.php';
     <script>";
 }
 
