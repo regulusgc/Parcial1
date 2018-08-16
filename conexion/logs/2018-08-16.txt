@@ -1,3 +1,31 @@
+Time : 23:47:37
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_USUAR211` FOREIGN KEY (`ID_USUARIO`) REFERENCES `tb_usuarios` (`ID_USUARIO`))
+Raw SQL : INSERT INTO tb_expediente 
+(ID_EXPEDIENTE, ID_TIPO_INGRESO, ID_TIPO_SOILCITUD_SUBSIDIO, ID_PROYECTO, FECHA_REGISTRO, OBSERVACIONES_EXPEDIENTE, MONTO_SOLICITADO,  
+LONGITUD_PROYECTO, LATITUD_PROYECTO, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_USUARIO) 
+VALUES(:id,:itipoin,:isub,:iproy,:fecha,:obser,:monto,:longi,:lati,:numexpe,:yearex,:usuario)
+
+Time : 23:45:09
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_USUAR211` FOREIGN KEY (`ID_USUARIO`) REFERENCES `tb_usuarios` (`ID_USUARIO`))
+Raw SQL : INSERT INTO tb_expediente 
+(ID_EXPEDIENTE, ID_TIPO_INGRESO, ID_TIPO_SOILCITUD_SUBSIDIO, ID_PROYECTO, FECHA_REGISTRO, OBSERVACIONES_EXPEDIENTE, MONTO_SOLICITADO,  
+LONGITUD_PROYECTO, LATITUD_PROYECTO, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_USUARIO) 
+VALUES(:id,:itipoin,:isub,:iproy,:fecha,:obser,:monto,:longi,:lati,:numexpe,:yearex,:usuario)
+
+Time : 23:40:42
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_USUAR211` FOREIGN KEY (`ID_USUARIO`) REFERENCES `tb_usuarios` (`ID_USUARIO`))
+Raw SQL : INSERT INTO tb_expediente 
+(ID_EXPEDIENTE, ID_TIPO_INGRESO, ID_TIPO_SOILCITUD_SUBSIDIO, ID_PROYECTO, FECHA_REGISTRO, OBSERVACIONES_EXPEDIENTE, MONTO_SOLICITADO,  
+LONGITUD_PROYECTO, LATITUD_PROYECTO, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_USUARIO) 
+VALUES(:id,:itipoin,:isub,:iproy,:fecha,:obser,:monto,:longi,:lati,:numexpe,:yearex,:usuario)
+
+Time : 23:39:47
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_USUAR211` FOREIGN KEY (`ID_USUARIO`) REFERENCES `tb_usuarios` (`ID_USUARIO`))
+Raw SQL : INSERT INTO tb_expediente 
+(ID_EXPEDIENTE, ID_TIPO_INGRESO, ID_TIPO_SOILCITUD_SUBSIDIO, ID_PROYECTO, FECHA_REGISTRO, OBSERVACIONES_EXPEDIENTE, MONTO_SOLICITADO,  
+LONGITUD_PROYECTO, LATITUD_PROYECTO, NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE, ID_USUARIO) 
+VALUES(:id,:itipoin,:isub,:iproy,:fecha,:obser,:monto,:longi,:lati,:numexpe,:yearex,:usuario)
+
 Time : 22:23:46
 SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_cat_municipios`, CONSTRAINT `FK_REFERENCE_20` FOREIGN KEY (`ID_DEPARTAMENTO`) REFERENCES `tb_cat_departamento` (`ID_DEPARTAMENTO`))
 Raw SQL : INSERT INTO tb_cat_municipios(ID_MUNICIPIO, ID_DEPARTAMENTO, DESCRIPCION_MUNICIPIO) VALUES(:f,:depi,:muni)

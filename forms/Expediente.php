@@ -55,7 +55,7 @@ $project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action="../insertar/InsertarExpediente.php" method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../forms/ExpedienteP2.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -72,7 +72,7 @@ $project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="user" placeholder="login" class="form-control"  type="text" value="<?php echo $username?>" >
+            <input  placeholder="login" class="form-control"  type="text" value="<?php echo $username?>" >
           </div>
         </div>
       </div>
@@ -114,25 +114,6 @@ $project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
           </div>
         </div>
       </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label">Numero de Expediente</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input name="numeroe" placeholder="" class="form-control" type="text">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-4 control-label">Año del Expediente</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    <input name="yearexp" placeholder="" class="form-control" type="text">
-                </div>
-            </div>
-        </div>
 
 
 
@@ -155,64 +136,7 @@ $project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Fecha de regisstro</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="fecha" placeholder="Fecha" class="form-control"  type="date" required>
-          </div>
-        </div>
-      </div>
 
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Monto Aproximado del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-            <input name="monto" placeholder="Monto" class="form-control" type="text" required>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Longitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="longitud" placeholder="Longitud" class="form-control"  type="text" required>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Latitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="latitud" placeholder="Latitud" class="form-control" type="text" required>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">OBservaciones</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="obs" placeholder="OBservaciones"></textarea>
-          </div>
-        </div>
-      </div>
 
       <!-- Text input-->
 

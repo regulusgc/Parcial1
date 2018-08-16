@@ -7,13 +7,15 @@
  */
 
 require ("../conexion/Db.class.php");
+session_start();
+
 $def = "default";
-$usuario = $_POST['user'];
-$tingreso = $_POST['tingreso'];
-$dsubsidio = $_POST['dsubsidio'];
+$usuario = $_COOKIE['username'];
+$tingreso = $_SESSION['tingreso'];
+$dsubsidio = $_SESSION['dsubsidio'];
 $numeroe = $_POST['numeroe'];
 $yearexp = $_POST['yearexp'];
-$proyecto = $_POST['proyecto'];
+$proyecto = $_SESSION['proyecto'];
 $fecha = $_POST['fecha'];
 $monto = $_POST['monto'];
 $longitud = $_POST['longitud'];
@@ -40,3 +42,4 @@ if ($insert){
 
 
 }
+session_destroy();
