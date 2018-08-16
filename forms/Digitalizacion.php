@@ -1,3 +1,25 @@
+<?php
+/*   session_start();
+
+
+   if (isset($_SESSION['autorizado']) == true) {
+
+   } else {
+       require("../libreria/notaNoAutorizado.php");
+   exit;
+   }*/
+require("../conexion/Db.class.php");
+
+if (mysqli_connect_errno())
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$db = new DB();
+$depto = $db->query("SELECT * FROM db_prueba.tb_digitalizacion ");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,73 +39,62 @@
     <p class="navbar-text pull-right">
       <a href="../login/lou.php"> Logout</a>
     </p>
-
     <p class="navbar-text pull-right">
       <a href="#" class="navbar-link"><?php
         if (isset($_COOKIE['username'])){
           echo ' Conectado como '. $_COOKIE['username'];
-
         }
         else{
           echo 'Conectate -->';
         }
-
         ?></a>
-
     </p>
 
   </div>
 </nav>
 <div class="container">
-
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../insertar/InsertarDigitalizacion.php" method="post"  id="contact_form">
     <fieldset>
-
       <!-- Form Name -->
       <legend>Digitalizaciones!</legend>
 
       <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID DocumentoDigitalizado</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
+<!---->
+<!--      <div class="form-group">-->
+<!--        <label class="col-md-4 control-label">ID DocumentoDigitalizado</label>-->
+<!--        <div class="col-md-4 inputGroupContainer">-->
+<!--          <div class="input-group">-->
+<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>-->
+<!--            <input  name="iuser" placeholder="1" class="form-control"  type="text"readonly="readonly" required>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label" >Login</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="user" class="form-control"  type="text" required>
-          </div>
-        </div>
-      </div>
+
 
       <div class="form-group">
         <label class="col-md-4 control-label">ID Expediente Requisito</label>
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your rol XD jaja</option>
-              <option>pues saber</option>
-              <option>Falta la base de datos</option>
-              <option >HOLIIIIIS</option>
-
-
+            <select name="IdExpReq" class="form-control selectpicker" required>
+              <option value=" " >Please select your rol</option>
             </select>
           </div>
         </div>
       </div>
 
-
+        <div class="form-group">
+            <label class="col-md-4 control-label" >Login</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="login" placeholder="user" class="form-control"  type="text" required>
+                </div>
+            </div>
+        </div>
 
       <!-- Text input-->
       <div class="form-group">
@@ -91,7 +102,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input  name="first_name" placeholder=" Nombre" class="form-control"  type="text" required>
+            <input  name="nombre_archivo" placeholder=" Nombre archivo" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -101,7 +112,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="city" placeholder="Fecha" class="form-control"  type="date"required>
+            <input name="fecha" placeholder="Fecha" class="form-control"  type="date"required>
           </div>
         </div>
       </div>

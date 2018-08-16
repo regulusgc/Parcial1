@@ -10,10 +10,10 @@
 <body>
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center">
+        <form method="post" action="../insertar/InsertarDestinoSubsidio.php" class="container text-center">
             <h3>Destino subsidio</h3>
             <div class="form-control-lg">
-                <input type="text" placeholder="Descripcion">
+                <input name="Descrip_destino" type="text" placeholder="Ingrese una descripcion" required>
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
             <div class="form-control-lg">
