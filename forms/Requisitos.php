@@ -1,3 +1,15 @@
+<?php
+require("../conexion/Db.class.php");
+
+$db = new DB();
+$tingreso = $db->query("SELECT * FROM db_prueba.tb_tipo_ingreso ");
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +50,7 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action=" ../forms/RequisitosP2.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -67,11 +79,13 @@
         <div class="col-md-4 selectContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value=" " >Please select your tipo XD</option>
-              <option>Alto</option>
-              <option>Medio</option>
-              <option >Bajo</option>
+            <select name="tipoing" class="form-control selectpicker" >
+                <option value="">Seleccione</option>
+                <?php
+                foreach ( $tingreso as $posicion) { ?>
+                    <option value="<?php echo $posicion['ID_TIPO_INGRESO']?> " ><?php echo $posicion['DESCRIPCION_INGRESO'] ?></option>
+                <?php }
+                ?>
 
             </select>
           </div>
@@ -79,42 +93,7 @@
       </div>
 
       <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Descripcion del Requisito</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="Descripcion" placeholder="Descripcion"></textarea>
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Observaciones</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="Descripcion" placeholder="Observaciones"></textarea>
-          </div>
-        </div>
-      </div>
-
-      <!-- radio checks -->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Obligatorio</label>
-        <div class="col-md-4">
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="yes" /> Yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="no" /> No
-            </label>
-          </div>
-        </div>
-      </div>
 
       <!-- Text area -->
 
