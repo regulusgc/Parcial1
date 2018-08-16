@@ -55,11 +55,12 @@ $DES = $db->query("SELECT * FROM db_prueba.tb_desarrolladores ");
 <div class="container" id="fondo">
 
 
-  <form class="well form-horizontal" action="../insertar/InsertarProyecto.php" method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../forms/ProyectosP2.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
       <legend>Proyectos</legend>
+        <legend>SELECCIONE EL DEPARTAMENTO EN EL QUE HARA EL PROYECTO</legend>
 
       <!-- Text input-->
 
@@ -75,63 +76,6 @@ $DES = $db->query("SELECT * FROM db_prueba.tb_desarrolladores ");
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label" >Nombre de Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="proyecto" placeholder="Proyecto" class="form-control"  type="text"  required pattern="[A-Za-z0-9]+">
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Longitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="longitud" placeholder="Longitud" class="form-control"  type="text"  required >
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Latitud del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-            <input name="latitud" placeholder="Latitud" class="form-control" type="text"required >
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Monto Aproximado del Proyecto</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-            <input name="monto" placeholder="Monto" class="form-control" type="text" required >
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Fecha de Inicio</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="date" placeholder="Fecha" class="form-control"  type="date"  required>
-          </div>
-        </div>
-      </div>
 
       <!-- Select Basic -->
 
@@ -156,45 +100,7 @@ $DES = $db->query("SELECT * FROM db_prueba.tb_desarrolladores ");
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Municipio</label>
-        <div class="col-md-4 selectContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="mpio" class="form-control selectpicker" id="mpio">
-                <option value="">Seleccione</option>
-                <?php
-                foreach ( $mpio as $posicion) { ?>
-                    <option value="<?php echo $posicion['ID_MUNICIPIO']?> " ><?php echo $posicion['DESCRIPCION_MUNICIPIO'] ?></option>
-                <?php }
-                ?>
 
-
-
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Desarrollador</label>
-        <div class="col-md-4 selectContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="desarrollador" class="form-control selectpicker" >
-              <option value=" " >Please select your Desarrollador XD jaja</option>
-                <?php
-                foreach ( $DES as $posicion) { ?>
-                    <option value="<?php echo $posicion['ID_DESARROLLADOR']?> " ><?php echo $posicion['NOMBRE_DESARROLLADOR'] ?></option>
-                <?php }
-                ?>
-
-
-            </select>
-          </div>
-        </div>
-      </div>
 
       <!-- Success message -->
       <div class="alert alert-success" role="alert" id="success_message"> <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por vender tu alma al Diablo</div>

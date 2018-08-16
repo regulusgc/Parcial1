@@ -14,7 +14,6 @@ $desSub = $db->query("SELECT * FROM db_prueba.tb_cat_destino_subsidio ");
 $project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
 
 
-
 ?>
 
 
