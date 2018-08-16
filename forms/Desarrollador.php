@@ -22,7 +22,6 @@
       <a href="#" class="navbar-link"><?php
         if (isset($_COOKIE['username'])){
           echo ' Conectado como '. $_COOKIE['username'];
-
         }
         else{
           echo 'Conectate -->';
@@ -36,23 +35,21 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form action="../insertar/InsertarDesarrollador.php" method="post" class="well form-horizontal" >
     <fieldset>
-
       <!-- Form Name -->
       <legend>Desarrolladores</legend>
 
       <!-- Text input-->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Desarrollador</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label class="col-md-4 control-label">ID Desarrollador</label>-->
+<!--        <div class="col-md-4 inputGroupContainer">-->
+<!--          <div class="input-group">-->
+<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>-->
+<!--            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <!-- Text input-->
 
@@ -61,7 +58,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Nombre Desarrollador" class="form-control"  type="text" required>
+            <input name="nombreDesarrollador" placeholder="Nombre Desarrollador" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -72,7 +69,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" required>
+            <input name="email" placeholder="Direccion E-Mail" class="form-control"  type="email" required>
           </div>
         </div>
       </div>
@@ -85,7 +82,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="(502)5555-1212" class="form-control" type="text" required>
+            <input name="telefono" placeholder="(502)5555-1212" class="form-control" type="text" required>
           </div>
         </div>
       </div>
@@ -97,7 +94,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="address" placeholder="Direccion" class="form-control" type="text"  required>
+            <input name="direcEmpresa" placeholder="Direccion" class="form-control" type="text"  required>
           </div>
         </div>
       </div>
@@ -109,7 +106,7 @@
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input name="city" placeholder="Nit" class="form-control"  type="text" required>
+            <input name="nit" placeholder="Nit" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
