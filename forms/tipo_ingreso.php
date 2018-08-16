@@ -1,20 +1,3 @@
-<?php
-/*   session_start();
-
-
-   if (isset($_SESSION['autorizado']) == true) {
-
-   } else {
-       require("../libreria/notaNoAutorizado.php");
-   exit;
-   }*/
-require("../conexion/logs/Db.Class.php");
-
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +11,10 @@ if (mysqli_connect_errno())
 <body>
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center">
+        <form  action="../insertar/InsertarTipo_ingreso.php" method="post" class="container text-center">
             <h3>Tipo Ingreso</h3>
             <div class="form-control-lg">
-                <input id="DESCRIPCION_INGRESO" type="text" placeholder="Descripcion">
+                <input id="DESCRIPCION_INGRESO" name="DESCRIPCION_INGRESO" type="text" placeholder="Descripcion" required>
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
             <div class="form-control-lg">
