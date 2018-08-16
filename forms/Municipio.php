@@ -32,7 +32,7 @@ $depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ");
 <body>
 
 <div class="container">
-    <div class="form-control bg-white">
+    <div class="form-control bg-white">+
         <form method="post" action="../insertar/InsertarMunicipio.php" class="container text-center" >
             <div class="form-control-lg">
                 <br>

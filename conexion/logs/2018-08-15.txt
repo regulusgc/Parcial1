@@ -1,0 +1,16 @@
+Time : 11:55:52
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'DESCRIPCION_DEPARTAMENTO'
+Raw SQL : INSERT INTO tb_cat_departamento(ID_DEPARTAMENTO, DESCRIPCION_DEPARTAMENTO) VALUES(:f,:depi)
+
+Time : 11:50:47
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mexico' for key 'DESCRIPCION_DEPARTAMENTO'
+Raw SQL : INSERT INTO tb_cat_departamento(ID_DEPARTAMENTO, DESCRIPCION_DEPARTAMENTO) VALUES(:f,:depi)
+
+Time : 09:40:46
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
+
+Time : 09:40:44
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
+
+Time : 09:31:45
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
