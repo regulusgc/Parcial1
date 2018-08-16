@@ -10,10 +10,10 @@
 <body>
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center">
+        <form action="../insertar/InsertarUnidad_de_trabajo.php" method="post" class="container text-center">
             <h3>Unidad de trabajo</h3>
             <div class="form-control-lg">
-                <input id="DESCRIPCION_UNIDAD" type="text" placeholder="Descripcion">
+                <input name="DESCRIPCION_UNIDAD" id="DESCRIPCION_UNIDAD" type="text" placeholder="Descripcion" required>
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
             <div class="form-control-lg">
