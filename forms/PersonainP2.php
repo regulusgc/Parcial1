@@ -245,7 +245,7 @@ $sex = $sexi['SEXO_NOMBRE'];
           <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning"   href="../inicio_digitadores/Digitadores.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a class="btn btn-warning"   href="../forms/Personain.php">Regresar <span class="glyphicon glyphicon-arrow-left"></span></a>
         </div>
       </div>
 
