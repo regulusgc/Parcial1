@@ -15,7 +15,7 @@ if (mysqli_connect_errno())
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $db = new DB();
-$depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ");
+$depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ORDER BY ID_DEPARTAMENTO ASC");
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ $depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ");
 <body>
 
 <div class="container">
-    <div class="form-control bg-white">+
+    <div class="form-control bg-white">
         <form method="post" action="../insertar/InsertarMunicipio.php" class="container text-center" >
             <div class="form-control-lg">
                 <br>
@@ -40,10 +40,9 @@ $depto = $db->query("SELECT * FROM db_prueba.tb_cat_departamento ");
                 <div class="form-control-lg">
                     <label for="select_depto">Elija un Departamento para poder agregar un municipio</label>
                     <br>
-                    <select class="text-lg-center" id="select_depto" required>
+                    <select name="depa" class="text-lg-center" id="select_depto" required>
                         <option selected>Elija un departamento</option>
-                        <option value="1">Uno</option>
-                        <?php
+                                       <?php
                         foreach ( $depto as $posicion) { ?>
                             <option value="<?php echo $posicion['ID_DEPARTAMENTO']?> " ><?php echo $posicion['DESCRIPCION_DEPARTAMENTO'] ?></option>
                         <?php }
