@@ -19,7 +19,7 @@ $proyecto = $_POST['proyecto'];
 $estamiel = $db->row("SELECT NUMERO_EXPEDIENTE, ANIO_EXPEDIENTE ,ID_EXPEDIENTE FROM db_prueba.tb_expediente
  WHERE ID_PROYECTO =:adf",array("adf"=>$proyecto));
 
-$lege =$_POST['requisito'];
+$lege =$_POST['idreq'];
 
 $nuevo = $db->row("SELECT * FROM db_prueba.tb_requisitos where ID_REQUISITO=:f",array("f"=>"$lege"));
 
@@ -131,7 +131,7 @@ print_r($expe);
 
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Fecha de Diligencia</label>
+            <label class="col-md-4 control-label">Fecha de Presentacion</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>

@@ -8,7 +8,7 @@ $username = $_COOKIE['username'];
 
 $tingreso = $db->query("SELECT * FROM db_prueba.tb_tipo_ingreso ");
 
-
+$requito = $db ->query("SELECT * FROM db_prueba.tb_requisitos");
 
 ?>
 
@@ -94,11 +94,20 @@ $tingreso = $db->query("SELECT * FROM db_prueba.tb_tipo_ingreso ");
 
 
         <div class="form-group">
-            <label class="col-md-4 control-label">ID Requisito</label>
-            <div class="col-md-4 inputGroupContainer">
+            <label class="col-md-4 control-label">Requisito </label>
+            <div class="col-md-4 selectContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="requisito" placeholder="2018" class="form-control" type="text" >
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="idreq" class="form-control selectpicker" >
+                        <option value="">Seleccione</option>
+                        <?php
+                        foreach ( $requito as $posicion) { ?>
+                            <option value="<?php echo $posicion['ID_REQUISITO']?> " ><?php echo $posicion['NOMBRE_REQPROYEC'] ?></option>
+                        <?php }
+                        ?>
+
+
+                    </select>
                 </div>
             </div>
         </div>

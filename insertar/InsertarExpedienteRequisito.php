@@ -38,7 +38,7 @@ VALUES(:idEXPRE,:idreq,:idexp,:numex,:anioex,:idusario,:fecha,:acp,:motivo)",
         "motivo"=>"$motivo"));
 
 if ($insert){
-    header("Location:../forms/ExpedienteDiligencias.php");
+    header("Location:../forms/ExpedienteRequisitoP2.php");
 
 
 
