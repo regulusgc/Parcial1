@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+Time : 11:55:52
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'DESCRIPCION_DEPARTAMENTO'
+Raw SQL : INSERT INTO tb_cat_departamento(ID_DEPARTAMENTO, DESCRIPCION_DEPARTAMENTO) VALUES(:f,:depi)
+
+Time : 11:50:47
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mexico' for key 'DESCRIPCION_DEPARTAMENTO'
+Raw SQL : INSERT INTO tb_cat_departamento(ID_DEPARTAMENTO, DESCRIPCION_DEPARTAMENTO) VALUES(:f,:depi)
+
+Time : 09:40:46
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
+
+Time : 09:40:44
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
+
+Time : 09:31:45
+SQLSTATE[HY000] [1049] Unknown database 'db_prueba'
+=======
 Time : 23:07:39
 SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_prueba`.`tb_expediente_diligencia`, CONSTRAINT `FK_TB_EXPED_REFERENCE_TB_EXPED23` FOREIGN KEY (`ID_EXPEDIENTE`, `NUMERO_EXPEDIENTE`, `ANIO_EXPEDIENTE`) REFERENCES `tb_expediente` (`ID_EXPE)
 Raw SQL : INSERT INTO  db_prueba.tb_expediente_diligencia 
@@ -117,3 +135,4 @@ Raw SQL : SELECT *FROM db_prueba.tb_cat_diligencias WHERE ID_UNIDAD =:adf
 Time : 20:16:42
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_UNIDAD' in 'where clause'
 Raw SQL : SELECT *FROM db_prueba.tb_cat_diligencias WHERE ID_UNIDAD =:adf
+>>>>>>> origin/master
