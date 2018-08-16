@@ -6,6 +6,31 @@ session_start();
 $_proyecto = $_POST['proyecto'];
 
 
+$estamiel = $db->row("SELECT ID_EXPEDIENTE FROM db_prueba.tb_expediente WHERE ID_PROYECTO =:adf",array("adf"=>$_proyecto));
+
+
+
+$expe = $estamiel['ID_EXPEDIENTE'];
+
+$experequi = $db->row("SELECT ID_EXPEDIENTE_REQUISITO
+FROM db_prueba.tb_expediente_requsitos WHERE ID_EXPEDIENTE =:exp",array("exp"=>"$expe") );
+
+
+
+$requisitoexpe = $experequi['ID_EXPEDIENTE_REQUISITO'];
+
+$_SESSION['relacionf'] = $_POST['relacionf'];
+$_SESSION['sexo'] = $_POST['sexo'];
+
+$Rel = $_SESSION['relacionf'];
+$sex = $_SESSION['sexo'];
+
+$yoteame = $db->row("SELECT RFAMILIAR_NOMBRE FROM db_prueba.tb_cat_relacion_familiar WHERE ID_RELACION_FAMILIAR =:exp",array("exp"=>"$Rel"));
+$sexi = $db->row("SELECT SEXO_NOMBRE FROM db_prueba.tb_sexo WHERE ID_SEXO =:exp",array("exp"=>"$sex"));
+
+$camino = $yoteame['RFAMILIAR_NOMBRE'];
+$sex = $sexi['SEXO_NOMBRE'];
+
 
 ?>
 
@@ -51,7 +76,7 @@ $_proyecto = $_POST['proyecto'];
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action=" ../insertar/InsertarPersonaIn.php" method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -67,65 +92,39 @@ $_proyecto = $_POST['proyecto'];
         </div>
       </div>
 
+
         <div class="form-group">
-            <label class="col-md-4 control-label">Proyecto</label>
-            <div class="col-md-4 selectContainer">
+            <label class="col-md-4 control-label">ID Expediente Requsito</label>
+            <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="proyecto" class="form-control selectpicker" >
-                        <option value="">Seleccione</option>
-                        <?php
-                        foreach ( $project as $posicion) { ?>
-                            <option value="<?php echo $posicion['ID_PROYECTO']?> " ><?php echo $posicion['NOMBRE_PROYECTO'] ?></option>
-                        <?php }
-                        ?>
-
-
-                    </select>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+                    <input  value="<?php echo $requisitoexpe ?>" name="exprequi" placeholder="1" class="form-control"  type="text"readonly="readonly">
                 </div>
             </div>
         </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Relacion Familiar</label>
-        <div class="col-md-4 selectContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-                <option value="">Seleccione</option>
-                <?php
-                foreach ( $refamiliar as $posicion) { ?>
-                    <option value="<?php echo $posicion['ID_RELACION_FAMILIAR']?> " ><?php echo $posicion['RFAMILIAR_NOMBRE'] ?></option>
-                <?php }
-                ?>
 
 
-            </select>
-          </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label"> Relacion Familiar</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+                    <input  value="<?php echo $camino ?>" name="refmi" placeholder="1" class="form-control"  type="text"readonly="readonly">
+                </div>
+            </div>
         </div>
-      </div>
       <!-- Text input-->
 
         <div class="form-group">
             <label class="col-md-4 control-label">Sexo </label>
-            <div class="col-md-4 selectContainer">
+            <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="state" class="form-control selectpicker" >
-                        <option value="">Seleccione</option>
-                        <?php
-                        foreach ( $sexo as $posicion) { ?>
-                            <option value="<?php echo $posicion['ID_SEXO']?> " ><?php echo $posicion['SEXO_NOMBRE'] ?></option>
-                        <?php }
-                        ?>
-
-
-                    </select>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
+                    <input  value="<?php echo $sex ?>" name="sexoo" placeholder="1" class="form-control"  type="text"readonly="readonly">
                 </div>
             </div>
         </div>
-
-
 
 
 
@@ -134,16 +133,17 @@ $_proyecto = $_POST['proyecto'];
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input  name="first_name" placeholder="Primer Nombre" class="form-control"  type="text" required>
+            <input  name="Nombre" placeholder="Primer Nombre" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
+
       <div class="form-group">
         <label class="col-md-4 control-label">Segundo Nombre</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input  name="first_name" placeholder="Segundo Nombre" class="form-control"  type="text">
+            <input  name="segundo" placeholder="Segundo Nombre" class="form-control"  type="text">
           </div>
         </div>
       </div>
@@ -155,7 +155,7 @@ $_proyecto = $_POST['proyecto'];
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Primer Apellido" class="form-control"  type="text"required>
+            <input name="apellido" placeholder="Primer Apellido" class="form-control"  type="text"required>
           </div>
         </div>
       </div>
@@ -165,7 +165,7 @@ $_proyecto = $_POST['proyecto'];
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Segundo Apellido" class="form-control"  type="text" >
+            <input name="segundoape" placeholder="Segundo Apellido" class="form-control"  type="text" >
           </div>
         </div>
       </div>
@@ -175,7 +175,7 @@ $_proyecto = $_POST['proyecto'];
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="last_name" placeholder="Apellido de Casada" class="form-control"  type="text" required>
+            <input name="maje" placeholder="Apellido de Casada" class="form-control"  type="text" >
           </div>
         </div>
       </div>
@@ -209,11 +209,11 @@ $_proyecto = $_POST['proyecto'];
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Numero de Documento</label>
+        <label class="col-md-4 control-label">Numero de Identificacion</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="city" placeholder="Numero" class="form-control"  type="text" required>
+            <input name="dpi" placeholder="Numero" class="form-control"  type="text" required>
           </div>
         </div>
       </div>
@@ -225,22 +225,14 @@ $_proyecto = $_POST['proyecto'];
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="city" placeholder="Fecha" class="form-control"  type="date" required>
+            <input name="birthday" placeholder="Fecha" class="form-control"  type="date" required>
           </div>
         </div>
       </div>
 
       <!-- Text input-->
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Expediente #</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="0905154807" class="form-control" type="text" required>
-          </div>
-        </div>
-      </div>
+
 
       <!-- Success message -->
       <div class="alert alert-success" role="alert" id="success_message"> <i class="glyphicon glyphicon-thumbs-up"></i>
