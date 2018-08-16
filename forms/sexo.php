@@ -10,11 +10,11 @@
 <body>
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center">
+        <form action="../insertar/InsertarSexo.php" method="post" class="container text-center">
             <br>
             <h3>Sexo</h3>
             <div class="form-control-lg">
-                <input id="SEXO_NOMBRE" type="text" placeholder="Nombre Sexo">
+                <input name="SEXO_NOMBRE" type="text" placeholder="Descripion Sexo" required>
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
             <div class="form-control-lg">

@@ -10,10 +10,10 @@
 <body>
 <div class="container">
     <div class="form-control bg-white">
-        <form class="container text-center">
+        <form action="../insertar/InsertarRoles.php" method="post" class="container text-center">
             <h3>Roles</h3>
             <div class="form-control-lg">
-                <input type="text" placeholder="Descripcion">
+                <input name="descRol" type="text" placeholder="Descripcion" required>
             </div>
             <button type="submit" class="btn btn-dark">Enviar Formulario</button>
             <div class="form-control-lg">
