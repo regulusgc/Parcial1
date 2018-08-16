@@ -1,3 +1,19 @@
+<?php
+require("../conexion/Db.class.php");
+
+$db = new DB();
+$project = $db->query("SELECT * FROM db_prueba.tb_cat_proyectos ");
+$username = $_COOKIE['username'];
+
+
+$tingreso = $db->query("SELECT * FROM db_prueba.tb_tipo_ingreso ");
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +53,7 @@
 </nav>
 <div class="container">
 
-  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <form class="well form-horizontal" action="../forms/ExpedienteRequisitoP2.php " method="post"  id="contact_form">
     <fieldset>
 
       <!-- Form Name -->
@@ -55,98 +71,57 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="1" class="form-control"  type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">ID Requisito</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-minus"></i></span>
-            <input  name="first_name" placeholder="ID Requisito" class="form-control"  type="text"required>
-          </div>
-        </div>
-      </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Proyecto</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="proyecto" class="form-control selectpicker" >
+                        <option value="">Seleccione</option>
+                        <?php
+                        foreach ( $project as $posicion) { ?>
+                            <option value="<?php echo $posicion['ID_PROYECTO']?> " ><?php echo $posicion['NOMBRE_PROYECTO'] ?></option>
+                        <?php }
+                        ?>
 
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">ID Requisito</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="requisito" placeholder="2018" class="form-control" type="text" >
+                </div>
+            </div>
+        </div>
       <!-- Text input-->
 
+
+
       <div class="form-group">
-        <label class="col-md-4 control-label" >Contraseña</label>
+        <label class="col-md-4 control-label">Usuario</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
-            <input name="password" placeholder="Contraseña" class="form-control"  type="text" required>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="usuario" placeholder="2018" class="form-control" type="text" value="<?php echo $username ?>" readonly="readonly">
           </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Numero de Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input name="phone" placeholder="00555" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label">Año del Expediente</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="phone" placeholder="2018" class="form-control" type="text"readonly="readonly">
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Fecha Presentacion</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input name="Date" placeholder="0905154807" class="form-control" type="datetime-local" required >
-          </div>
-        </div>
-      </div>
       <!-- Text input-->
 
 
       <!-- radio checks -->
-      <div class="form-group">
-        <label class="col-md-4 control-label">Estado</label>
-        <div class="col-md-4">
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="Aceptado" /> Aceptado
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="hosting" value="recha" /> Rechazado
-            </label>
-          </div>
-        </div>
-      </div>
 
-      <!-- Text area -->
-
-      <div class="form-group">
-        <label class="col-md-4 control-label">Motivo Del Rechazo</label>
-        <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="comment" placeholder="Motivo"></textarea>
-          </div>
-        </div>
-      </div>
 
       <!-- Success message -->
       <div class="alert alert-success" role="alert" id="success_message"><i class="glyphicon glyphicon-thumbs-up"></i> Gracias <3</div>
