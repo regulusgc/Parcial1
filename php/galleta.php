@@ -49,6 +49,9 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
         elseif ($paradonde['ID_UNIDAD']==5){
             header('Location:../inicio_social/social.php');
         }
+        elseif ($paradonde['ID_UNIDAD']==8){
+            header('Location:../inicio_jefesote/jefesote.php');
+        }
         else
         {
             echo "fallaste maje";

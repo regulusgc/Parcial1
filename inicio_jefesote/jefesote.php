@@ -51,7 +51,7 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
 	<nav class="pages-nav">
 		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Home</a></div>
 
-        <div class="pages-nav__item"><a class="link link--page" href="#page-training">Expediente Dilegencias</a></div>
+        <div class="pages-nav__item"><a class="link link--page" href="#page-training">Aprobar Proyectos</a></div>
 
 		<div class="pages-nav__item pages-nav__item--social">
 			<a class="link link--social link--faded" href="https://www.instagram.com/regulus_gc/"><i class="fa fa-instagram" aria-hidden="true"></i><span class="text-hidden">Instagram</span></a>
@@ -67,9 +67,9 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
 		<div class="page" id="page-home">
 			<!-- Blueprint header -->
 			<header class="bp-header cf">
-				<span class="bp-header__present">Juridico <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
-				<h1 class="bp-header__title">Bienvenido</h1>
-				<p class="bp-header__desc">Creacion de Formularios </p>
+				<span class="bp-header__present">CENTRAL DE OPERACIONES <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<h1 class="bp-header__title">Bienvenido MI JEFAASOOOO</h1>
+				<p class="bp-header__desc">APROBAR PROYECTOS </p>
                 <p class="bp-header__title"><?php echo $completo['NOMBRE']; ?></p>
                 <p class="bp-header__title"><?php echo $completo['APELLIDO']; ?></p>
 
@@ -81,14 +81,14 @@ $completo = $db->row("SELECT NOMBRE,APELLIDO FROM db_prueba.tb_usuarios WHERE US
             <!-- /page -->
         <div class="page" id="page-training">
             <header class="bp-header cf">
-                <h1 class="bp-header__title">Expediente Diligencias</h1>
-                <p class="bp-header__desc">Expediente de Diligencias</p>
+                <h1 class="bp-header__title">Aprobar proyectos</h1>
+                <p class="bp-header__desc">Tienes que aprobar los proyectos que se te piden</p>
                 <p class="info">
 
                 </p>
                 <br>
                 <br>
-                <a class="boton_personalizado"  href="../forms/ExpedienteDiligencias.php">Crear</a>
+                <a class="boton_personalizado"  href="../forms/Aprobar.php">APROBAR</a>
             </header>
             <img class="poster" src="images/pers.png" alt="img05" />
         </div>
