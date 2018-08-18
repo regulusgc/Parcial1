@@ -18,6 +18,9 @@ $Charizar = $id['ID_EXPEDIENTE'];
 $update   =  $db->query("UPDATE tb_expediente SET APROBADO = :f WHERE ID_EXPEDIENTE = :id", array("f"=>"$aprobado","id"=>"$Charizar"));
 
 if ($update){
+
+
+
     header("Location:../inicio_jefesote/jefesote.php");
 
 
