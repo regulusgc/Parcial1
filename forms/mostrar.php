@@ -6,10 +6,15 @@
  * Time: 3:45 PM
  */
 require ("../conexion/Db.class.php");
-
+session_start();
 $db = new DB();
-$proyecto = $_POST['proyecto'];
+$_SESSION['proyecto'] = $_POST['proyecto'];
+$proyecto = $_SESSION['proyecto'];
 $id = $db->row("SELECT ID_EXPEDIENTE FROM tb_expediente WHERE ID_PROYECTO = :f ", array("f"=>$proyecto));
+
+
+
+
 $esteId = $id['ID_EXPEDIENTE'];
 print_r($esteId);
 
@@ -146,362 +151,363 @@ WHERE EXPD.ID_EXPEDIENTE = :f" ,array("f"=>"$esteId"));
 <BR>
 <br>
 <br>
+<div class="container">
+    <form action="../insertar/aprobarExp.php" method="post">
 
-<div class="container-fluid" id="cosas">
-
-    <div class="row text-center">
-        <div class="col-sm-4">
-            <h3>
-                <span class="glyphicon glyphicon-tower"></span> Expediente </h3>
-            <?php
-            foreach ($_MosrarExpe as $cosas)
-            {
-
-                ?>
-            <br>
-            <br>
-            <label>ID EXPEDIENTE </label>
-                <br>
-          <strong> <?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
-                <br>
-            <br>
-            <label>TIPO DE INGRESO </label>
-                <br>
-                <strong> <?php echo $cosas['DESCRIPCION_INGRESO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>TIPO DE SUBSIDIO </label>
-                <br>
-                <strong><?php echo $cosas['DESCRIPCION'] ?> </strong>
-
-            <br>
-            <br>
-            <label>ID PROYECTO </label>
-                <br>
-                <strong> <?php echo $cosas['ID_PROYECTO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>NOMBRE DEL PROYECTO </label>
-                <br>
-                <strong><?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>FECHA DE REGISTRO </label>
-                <br>
-                <strong><?php echo $cosas['FECHA_REGISTRO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>OBSERVACIONES </label>
-                <br>
-                <strong><?php echo $cosas['OBSERVACIONES_EXPEDIENTE'] ?> </strong>
-
-            <br>
-            <br>
-            <label>MONTO SOLICITADO </label>
-                <br>
-                <strong><?php echo $cosas['MONTO_SOLICITADO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>LONGITUD DEL PROYECTO </label>
-                <br>
-                <strong><?php echo $cosas['LONGITUD_PROYECTO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>LATITUD DEL PROYECTO </label>
-                <br>
-                <strong><?php echo $cosas['LATITUD_PROYECTO'] ?> </strong>
-
-            <br>
-            <br>
-            <label>NUMERO DEL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
-
-            <br>
-            <br>
-            <label>AÑO DEL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
-
-            <br>
-            <br>
-            <label>USUARIO QUE INGRESO ESTE EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['USERNAME'] ?> </strong>
-            <br>
-                <br>
-                <br>
-                <label>-------------------------------------------</label>
-                <br>
-                <br>
-            <?php } ?>
-
-        </div>
-
-        <div class="col-sm-4">
-            <h3>
-                <span class="glyphicon glyphicon-tower"></span> Expediente Requisitos </h3>
-
-            <?php
-            foreach ($_MostrarExpedienteRequisito as $cosas)
-            {
-
-                ?>
-                <br>
-                <br>
-                <label>ID EXPEDIENTE DE REQUISIO </label>
-                <br>
-                <strong> <?php echo $cosas['ID_EXPEDIENTE_REQUISITO'] ?> </strong>
-                <br>
-                <br>
-                <label>ID DEL REQUISITO </label>
-                <br>
-                <strong> <?php echo $cosas['ID_REQUISITO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>ID DEL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>NOMBRE DEL PROYECTO </label>
-                <br>
-                <strong> <?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>NUMERO DE EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>AÑO DEL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>ID DEL TIPO DE INGRESO </label>
-                <br>
-                <strong><?php echo $cosas['ID_TIPO_INGRESO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>TIPO DE SOLICITUD </label>
-                <br>
-                <strong><?php echo $cosas['DESCRIPCION_INGRESO'] ?> </strong>
-
-            <?php
-            if ($cosas['ID_TIPO_INGRESO']==1)
-            {
-                ?>
-
-                <br>
-                <br>
-                <label>PRESENTO CARENCIA DE BIENES</label>
-                <br>
-                <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
-
-                <br>
-                <br>
-                <label>PRESENTO SALARIO MINIMO </label>
-                <br>
-                <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
-                <br>
-                <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>PRESENTO BOLETO DE ORNATO</label>
-                <br>
-                <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>NOMBRE DEL PROYECTO </label>
-                <br>
-                <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
-                <br>
-                <br>
-                <?php }
-                elseif ($cosas['ID_TIPO_INGRESO']==2)
-                {
-                    ?>
-                    <br>
-                    <br>
-                    <label>PRESENTO CARENCIA DE BIENES</label>
-                    <br>
-                    <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
-
-                    <br>
-                    <br>
-                    <label>PRESENTO SALARIO MINIMO </label>
-                    <br>
-                    <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
-
-                    <br>
-                    <br>
-                    <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
-                    <br>
-                    <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
-
-                    <br>
-                    <br>
-                    <label>PRESENTO BOLETO DE ORNATO</label>
-                    <br>
-                    <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
-
-                    <br>
-                    <br>
-                    <label>NOMBRE DEL PROYECTO </label>
-                    <br>
-                    <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
-                    <br>
-                    <br>
-
-                    <br>
-                    <br>
-                    <label>HAY AUTORIZACION DEL COCODE </label>
-                    <br>
-                    <strong><?php echo $cosas['AUTO_COCODE'] ?> </strong>
-
-                    <br>
-                    <br>
-
-                    <br>
-                    <br>
-                    <label>NOMBRE DEL LIDER DEL GRUPO </label>
-                    <br>
-                    <strong><?php echo $cosas['LIDER_GRUPO'] ?> </strong>
-
-                    <br>
-                    <br>
-                    <?php }
-                    else
+        <div class="container-fluid" id="cosas">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <h3>
+                        <span class="glyphicon glyphicon-tower"></span> Expediente </h3>
+                    <?php
+                    foreach ($_MosrarExpe as $cosas)
                     {
-                    ?>
+
+                        ?>
                         <br>
                         <br>
-                        <label>PRESENTO CARENCIA DE BIENES </label>
+                        <label>ID EXPEDIENTE </label>
                         <br>
-                        <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
+                        <strong> <?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
+                        <br>
+                        <br>
+                        <label>TIPO DE INGRESO </label>
+                        <br>
+                        <strong> <?php echo $cosas['DESCRIPCION_INGRESO'] ?> </strong>
 
                         <br>
                         <br>
-                        <label>PRESENTO SALARIO MINIMO </label>
+                        <label>TIPO DE SUBSIDIO </label>
                         <br>
-                        <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
+                        <strong><?php echo $cosas['DESCRIPCION'] ?> </strong>
 
                         <br>
                         <br>
-                        <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
+                        <label>ID PROYECTO </label>
                         <br>
-                        <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
-
-                        <br>
-                        <br>
-                        <label>PRESENTO BOLETO DE ORNATO </label>
-                        <br>
-                        <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
+                        <strong> <?php echo $cosas['ID_PROYECTO'] ?> </strong>
 
                         <br>
                         <br>
                         <label>NOMBRE DEL PROYECTO </label>
                         <br>
-                        <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <label>PROVEEDOR DEL ESTADO </label>
-                        <br>
-                        <strong><?php echo $cosas['PROVEEDOR_ESTADO'] ?> </strong>
+                        <strong><?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
 
                         <br>
                         <br>
+                        <label>FECHA DE REGISTRO </label>
+                        <br>
+                        <strong><?php echo $cosas['FECHA_REGISTRO'] ?> </strong>
 
                         <br>
                         <br>
-                        <label>SOLVENCIA EN CONTRALORIA </label>
+                        <label>OBSERVACIONES </label>
                         <br>
-                        <strong><?php echo $cosas['SOLVENCIA_CONTRALORIA'] ?> </strong>
+                        <strong><?php echo $cosas['OBSERVACIONES_EXPEDIENTE'] ?> </strong>
 
                         <br>
                         <br>
-                        <label>NOMBRE DE LA EMPRESA </label>
+                        <label>MONTO SOLICITADO </label>
                         <br>
-                        <strong><?php echo $cosas['NOMBRE_EMPRESA'] ?> </strong>
+                        <strong><?php echo $cosas['MONTO_SOLICITADO'] ?> </strong>
 
+                        <br>
+                        <br>
+                        <label>LONGITUD DEL PROYECTO </label>
+                        <br>
+                        <strong><?php echo $cosas['LONGITUD_PROYECTO'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>LATITUD DEL PROYECTO </label>
+                        <br>
+                        <strong><?php echo $cosas['LATITUD_PROYECTO'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>NUMERO DEL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>AÑO DEL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>USUARIO QUE INGRESO ESTE EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['USERNAME'] ?> </strong>
+                        <br>
+                        <br>
+                        <br>
+                        <label>-------------------------------------------</label>
                         <br>
                         <br>
                     <?php } ?>
 
-                <br>
-                <br>
-                <label>ES OBLIGATORIO </label>
-                <br>
-                <strong><?php echo $cosas['OBLIGATORIO'] . "ES" ?> </strong>
+                </div>
 
-                <br>
-                <br>
+                <div class="col-sm-4">
+                    <h3>
+                        <span class="glyphicon glyphicon-tower"></span> Expediente Requisitos </h3>
 
-                <br>
-                <br>
-                <label>ID DEL USUARIO </label>
-                <br>
-                <strong><?php echo $cosas['ID_USUARIO'] ?> </strong>
+                    <?php
+                    foreach ($_MostrarExpedienteRequisito as $cosas)
+                    {
 
-                <br>
-                <br>
+                        ?>
+                        <br>
+                        <br>
+                        <label>ID EXPEDIENTE DE REQUISIO </label>
+                        <br>
+                        <strong> <?php echo $cosas['ID_EXPEDIENTE_REQUISITO'] ?> </strong>
+                        <br>
+                        <br>
+                        <label>ID DEL REQUISITO </label>
+                        <br>
+                        <strong> <?php echo $cosas['ID_REQUISITO'] ?> </strong>
 
-                <br>
-                <br>
-                <label>NOMBRE DEL USUARIO QUE REALIZO EL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['USERNAME'] ?> </strong>
+                        <br>
+                        <br>
+                        <label>ID DEL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
 
-                <br>
-                <br>
+                        <br>
+                        <br>
+                        <label>NOMBRE DEL PROYECTO </label>
+                        <br>
+                        <strong> <?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
 
-                <br>
-                <br>
-                <label>FECHA DE PRESENTACION </label>
-                <br>
-                <strong><?php echo $cosas['FECHA_PRESENTACION']  ?> </strong>
+                        <br>
+                        <br>
+                        <label>NUMERO DE EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
 
-                <br>
-                <br>
+                        <br>
+                        <br>
+                        <label>AÑO DEL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
 
-                <br>
-                <br>
-                <label>(A = ACEPTADO / R = RECHAZADO) </label>
-                <br>
-                <strong><?php echo $cosas['ACEPTADO'] ?> </strong>
+                        <br>
+                        <br>
+                        <label>ID DEL TIPO DE INGRESO </label>
+                        <br>
+                        <strong><?php echo $cosas['ID_TIPO_INGRESO'] ?> </strong>
 
-                <br>
-                <br>
+                        <br>
+                        <br>
+                        <label>TIPO DE SOLICITUD </label>
+                        <br>
+                        <strong><?php echo $cosas['DESCRIPCION_INGRESO'] ?> </strong>
 
-                <br>
-                <br>
-                <label>MOTIVO DEL RECHAZO </label>
-                <br>
-                <strong><?php echo $cosas['MOTIVO_RECHAZO']  ?> </strong>
+                        <?php
+                        if ($cosas['ID_TIPO_INGRESO']==1)
+                        {
+                            ?>
 
-                <br>
-                <br>
+                            <br>
+                            <br>
+                            <label>PRESENTO CARENCIA DE BIENES</label>
+                            <br>
+                            <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO SALARIO MINIMO </label>
+                            <br>
+                            <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
+                            <br>
+                            <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO BOLETO DE ORNATO</label>
+                            <br>
+                            <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>NOMBRE DEL PROYECTO </label>
+                            <br>
+                            <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
+                            <br>
+                            <br>
+                        <?php }
+                        elseif ($cosas['ID_TIPO_INGRESO']==2)
+                        {
+                            ?>
+                            <br>
+                            <br>
+                            <label>PRESENTO CARENCIA DE BIENES</label>
+                            <br>
+                            <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO SALARIO MINIMO </label>
+                            <br>
+                            <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
+                            <br>
+                            <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO BOLETO DE ORNATO</label>
+                            <br>
+                            <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>NOMBRE DEL PROYECTO </label>
+                            <br>
+                            <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
+                            <br>
+                            <br>
+
+                            <br>
+                            <br>
+                            <label>HAY AUTORIZACION DEL COCODE </label>
+                            <br>
+                            <strong><?php echo $cosas['AUTO_COCODE'] ?> </strong>
+
+                            <br>
+                            <br>
+
+                            <br>
+                            <br>
+                            <label>NOMBRE DEL LIDER DEL GRUPO </label>
+                            <br>
+                            <strong><?php echo $cosas['LIDER_GRUPO'] ?> </strong>
+
+                            <br>
+                            <br>
+                        <?php }
+                        else
+                        {
+                            ?>
+                            <br>
+                            <br>
+                            <label>PRESENTO CARENCIA DE BIENES </label>
+                            <br>
+                            <strong><?php echo $cosas['CARENCIA_BIENES'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO SALARIO MINIMO </label>
+                            <br>
+                            <strong><?php echo $cosas['SALARIO_MINIMO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO ESTUDIO SOCIOECONOMICO </label>
+                            <br>
+                            <strong><?php echo $cosas['STDSOCIOECONOMICO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>PRESENTO BOLETO DE ORNATO </label>
+                            <br>
+                            <strong><?php echo $cosas['BOLETO_ORNATO'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>NOMBRE DEL PROYECTO </label>
+                            <br>
+                            <strong><?php echo $cosas['NOMBRE_REQPROYEC'] ?> </strong>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <label>PROVEEDOR DEL ESTADO </label>
+                            <br>
+                            <strong><?php echo $cosas['PROVEEDOR_ESTADO'] ?> </strong>
+
+                            <br>
+                            <br>
+
+                            <br>
+                            <br>
+                            <label>SOLVENCIA EN CONTRALORIA </label>
+                            <br>
+                            <strong><?php echo $cosas['SOLVENCIA_CONTRALORIA'] ?> </strong>
+
+                            <br>
+                            <br>
+                            <label>NOMBRE DE LA EMPRESA </label>
+                            <br>
+                            <strong><?php echo $cosas['NOMBRE_EMPRESA'] ?> </strong>
+
+                            <br>
+                            <br>
+                        <?php } ?>
+
+                        <br>
+                        <br>
+                        <label>ES OBLIGATORIO </label>
+                        <br>
+                        <strong><?php echo $cosas['OBLIGATORIO'] . "ES" ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <label>ID DEL USUARIO </label>
+                        <br>
+                        <strong><?php echo $cosas['ID_USUARIO'] ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <label>NOMBRE DEL USUARIO QUE REALIZO EL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['USERNAME'] ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <label>FECHA DE PRESENTACION </label>
+                        <br>
+                        <strong><?php echo $cosas['FECHA_PRESENTACION']  ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <label>(A = ACEPTADO / R = RECHAZADO) </label>
+                        <br>
+                        <strong><?php echo $cosas['ACEPTADO'] ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <label>MOTIVO DEL RECHAZO </label>
+                        <br>
+                        <strong><?php echo $cosas['MOTIVO_RECHAZO']  ?> </strong>
+
+                        <br>
+                        <br>
 
 
 
@@ -510,126 +516,151 @@ WHERE EXPD.ID_EXPEDIENTE = :f" ,array("f"=>"$esteId"));
 
 
 
-                <br>
-                <label>-------------------------------------------</label>
-                <br>
-                <br>
-            <?php } ?>
+                        <br>
+                        <label>-------------------------------------------</label>
+                        <br>
+                        <br>
+                    <?php } ?>
 
+                </div>
+
+                <div class="col-sm-4">
+                    <h3>
+                        <span class="glyphicon glyphicon-tower"></span> Expediente Diligencias </h3>
+                    <?php
+                    foreach ($lasDilis as $cosas)
+                    {
+
+                        ?>
+                        <br>
+                        <br>
+                        <label>ID EXPEDIENTE DE LAS DILIGENCIAS</label>
+                        <br>
+                        <strong> <?php echo $cosas['ID_DILIGENCIA_EXPEDIENTE'] ?> </strong>
+                        <br>
+                        <br>
+                        <label>ID DEL EXPEDIENTE </label>
+                        <br>
+                        <strong> <?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>NOMBRE DEL PROYECTO</label>
+                        <br>
+                        <strong><?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>NUMERO DEL EXPEDIENTE </label>
+                        <br>
+                        <strong> <?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>AÑO DEL EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>ID DE LA DILIGENCIA </label>
+                        <br>
+                        <strong><?php echo $cosas['ID_DILIGENCIA'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>TIPO DE LA DILIGENCIA </label>
+                        <br>
+                        <strong><?php echo $cosas['DESCRIPCION_DILIGENCIA'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>ID DEL USUARIO </label>
+                        <br>
+                        <strong><?php echo $cosas['ID_USUARIO'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>UNIDAD DE TRABAJO QUE EVALUO LA DILIGENCIA </label>
+                        <br>
+                        <strong><?php echo $cosas['DESCRIPCION_UNIDAD'] ?> </strong>
+
+                        <br>
+                        <br>
+
+                        <label>USUARIO QUE LLENO ESTE EXPEDIENTE </label>
+                        <br>
+                        <strong><?php echo $cosas['USERNAME'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>FECHA DE LA DILIGENCIA </label>
+                        <br>
+                        <strong><?php echo $cosas['FECHA_DILIGENCIA'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>RESULTADO DE LA DILIGENCIA </label>
+                        <br>
+                        <strong><?php echo $cosas['RESULTADO_DILIGENCIA'] ?> </strong>
+
+                        <br>
+                        <br>
+                        <label>DILIGENCIA FINALIZADA (S = SI/ N=NO) </label>
+                        <br>
+                        <strong><?php echo $cosas['DILIGENCIA_FINALIZADA'] ?> </strong>
+
+                        <br>
+
+
+
+                        <br>
+                        <label>-------------------------------------------</label>
+                        <br>
+                        <br>
+                    <?php } ?>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <br>
+            <br>
         </div>
 
-        <div class="col-sm-4">
-            <h3>
-                <span class="glyphicon glyphicon-tower"></span> Expediente Diligencias </h3>
-            <?php
-            foreach ($lasDilis as $cosas)
-            {
-
-                ?>
-                <br>
-                <br>
-                <label>ID EXPEDIENTE DE LAS DILIGENCIAS</label>
-                <br>
-                <strong> <?php echo $cosas['ID_DILIGENCIA_EXPEDIENTE'] ?> </strong>
-                <br>
-                <br>
-                <label>ID DEL EXPEDIENTE </label>
-                <br>
-                <strong> <?php echo $cosas['ID_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>NOMBRE DEL PROYECTO</label>
-                <br>
-                <strong><?php echo $cosas['NOMBRE_PROYECTO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>NUMERO DEL EXPEDIENTE </label>
-                <br>
-                <strong> <?php echo $cosas['NUMERO_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>AÑO DEL EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['ANIO_EXPEDIENTE'] ?> </strong>
-
-                <br>
-                <br>
-                <label>ID DE LA DILIGENCIA </label>
-                <br>
-                <strong><?php echo $cosas['ID_DILIGENCIA'] ?> </strong>
-
-                <br>
-                <br>
-                <label>TIPO DE LA DILIGENCIA </label>
-                <br>
-                <strong><?php echo $cosas['DESCRIPCION_DILIGENCIA'] ?> </strong>
-
-                <br>
-                <br>
-                <label>ID DEL USUARIO </label>
-                <br>
-                <strong><?php echo $cosas['ID_USUARIO'] ?> </strong>
-
-                <br>
-                <br>
-                <label>UNIDAD DE TRABAJO QUE EVALUO LA DILIGENCIA </label>
-                <br>
-                <strong><?php echo $cosas['DESCRIPCION_UNIDAD'] ?> </strong>
-
-                <br>
-                <br>
-
-                <label>USUARIO QUE LLENO ESTE EXPEDIENTE </label>
-                <br>
-                <strong><?php echo $cosas['USERNAME'] ?> </strong>
-
-                <br>
-                <br>
-                <label>FECHA DE LA DILIGENCIA </label>
-                <br>
-                <strong><?php echo $cosas['FECHA_DILIGENCIA'] ?> </strong>
-
-                <br>
-                <br>
-                <label>RESULTADO DE LA DILIGENCIA </label>
-                <br>
-                <strong><?php echo $cosas['RESULTADO_DILIGENCIA'] ?> </strong>
-
-                <br>
-                <br>
-                <label>DILIGENCIA FINALIZADA (S = SI/ N=NO) </label>
-                <br>
-                <strong><?php echo $cosas['DILIGENCIA_FINALIZADA'] ?> </strong>
-
-                <br>
-
-
-
-                <br>
-                <label>-------------------------------------------</label>
-                <br>
-                <br>
-            <?php } ?>
-
-
-
-
-
-
-
-
-
-
-
+        <div style="visibility: hidden">
+            <input type="text" name="aprobar" value="Si">
         </div>
+        <div class="form-group">
+
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-warning" >APROBAAR <span class="glyphicon glyphicon-send"></span></button>
+            </div>
 
 
 
-    </div>
+    </form>
 </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
 
