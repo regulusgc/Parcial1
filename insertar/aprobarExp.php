@@ -18,11 +18,7 @@ $Charizar = $id['ID_EXPEDIENTE'];
 $update   =  $db->query("UPDATE tb_expediente SET APROBADO = :f WHERE ID_EXPEDIENTE = :id", array("f"=>"$aprobado","id"=>"$Charizar"));
 
 
-$to = "chupaalperro1718@gmail.com";
-$subject = "Aprobado";
-$message = "Se aprobo el proyecto";
 
-mail($to, $subject, $message);
 
 if ($update){
 
