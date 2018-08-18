@@ -42,11 +42,11 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
         elseif ($paradonde['ID_UNIDAD']==3){
             header('Location:../inicio_juridico/juridico.php');
         }
-        elseif ($paradonde['ID_UNIDAD']==4){
+        elseif ($paradonde['ID_UNIDAD']==5){
             header('Location:../inicio_financiero/financiero.php');
         }
 
-        elseif ($paradonde['ID_UNIDAD']==5){
+        elseif ($paradonde['ID_UNIDAD']==4){
             header('Location:../inicio_social/social.php');
         }
         elseif ($paradonde['ID_UNIDAD']==8){
