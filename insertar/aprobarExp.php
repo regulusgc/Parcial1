@@ -7,7 +7,7 @@
  */
 session_start();
 $aprobado = $_POST['aprobar'];
-print_r($aprobado);
+
 
 require ("../conexion/Db.class.php");
 

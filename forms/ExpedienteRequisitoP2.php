@@ -27,9 +27,7 @@ $numero = $estamiel['NUMERO_EXPEDIENTE'];
 $anio = $estamiel['ANIO_EXPEDIENTE'];
 $expe = $estamiel['ID_EXPEDIENTE'];
 
-print_r($numero);
-print_r($anio);
-print_r($expe);
+
 
 
 

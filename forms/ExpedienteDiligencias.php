@@ -7,9 +7,9 @@ $username = $_COOKIE['username'];
 $id = $db->row("SELECT ID_UNIDAD FROM tb_usuarios WHERE USERNAME = :f ", array("f"=>$username));
 
 $KAMISAMA = $id["ID_UNIDAD"];
-print_r($KAMISAMA);
+
 $estamiel = $db->query("SELECT * FROM db_prueba.tb_cat_diligencias WHERE ID_UNIDAD_TRABAJO =:adf",array("adf"=>$KAMISAMA));
-print_r($estamiel);
+
 
 
 

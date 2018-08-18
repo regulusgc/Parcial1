@@ -12,7 +12,7 @@ tb_expediente AS EXP
 INNER JOIN
 tb_cat_proyectos AS PROY ON EXP.ID_PROYECTO = PROY.ID_PROYECTO  WHERE APROBADO =:f ",array("f"=>"No"));
 
-print_r($project);
+
 $username = $_COOKIE['username'];
 
 

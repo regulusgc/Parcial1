@@ -27,7 +27,7 @@ if ($login['USERNAME']== $username && $login['CLAVE']==$password)
         $estado = true;
     }
     $paradonde = $db->row("SELECT DISTINCT ID_UNIDAD FROM db_prueba.tb_usuarios WHERE USERNAME = :t ",array("t"=>$username));
-    print_r ($paradonde);
+
     if (isset($paradonde)== true )
     {
         if ($paradonde['ID_UNIDAD']==1 ){

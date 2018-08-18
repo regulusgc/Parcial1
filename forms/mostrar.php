@@ -16,7 +16,7 @@ $id = $db->row("SELECT ID_EXPEDIENTE FROM tb_expediente WHERE ID_PROYECTO = :f "
 
 
 $esteId = $id['ID_EXPEDIENTE'];
-print_r($esteId);
+
 
 $_MosrarExpe = $db->query("SELECT 
 		E.ID_EXPEDIENTE, 
