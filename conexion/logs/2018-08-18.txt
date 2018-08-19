@@ -1,0 +1,42 @@
+Time : 01:46:34
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT  
+ EXPD.ID_DILIGENCIA_EXPEDIENTE, 
+ EXPD.ID_EXPEDIENTE, 
+ PROY.NOMBRE_PRO' at line 2
+Raw SQL : SELECT  
+SELECT  
+ EXPD.ID_DILIGENCIA_EXPEDIENTE, 
+ EXPD.ID_EXPEDIENTE, 
+ PROY.NOMBRE_PROYECTO, 
+ EXPD.NUMERO_EXPEDIENTE,  
+ EXPD.ANIO_EXPEDIENTE,  
+ EXPD.ID_DILIGENCIA, 
+ CD.DESCRIPCION_DILIGENCIA, 
+ EXPD.ID_USUARIO, 
+ UTRA.DESCRIPCION_UNIDAD, 
+ USI.USERNAME, 
+ FECHA_DILIGENCIA,  
+ RESULTADO_DILIGENCIA,  
+ DILIGENCIA_FINALIZADA 
+ 
+FROM db_prueba.tb_expediente_diligencia AS EXPD 
+ 
+INNER JOIN  
+tb_expediente AS EXPI ON EXPD.ID_EXPEDIENTE = EXPI.ID_EXPEDIENTE 
+ 
+INNER JOIN 
+tb_cat_diligencias AS CD ON CD.ID_DILIGENCIA = EXPD.ID_DILIGENCIA 
+ 
+INNER JOIN 
+tb_usuarios AS USI ON USI.ID_USUARIO = EXPD.ID_USUARIO 
+INNER JOIN 
+tb_cat_proyectos AS PROY ON PROY.ID_PROYECTO = EXPI.ID_PROYECTO 
+ 
+INNER JOIN 
+tb_unidad_trabajo AS UTRA ON UTRA.ID_UNIDAD_TRABAJO = CD.ID_UNIDAD_TRABAJO 
+ 
+WHERE EXPD.ID_EXPEDIENTE = :f
+
+Time : 00:06:05
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'APROBADO' in 'where clause'
+Raw SQL : SELECT * FROM db_prueba.tb_cat_proyectos WHERE APROBADO =:f
